@@ -1,0 +1,581 @@
+// 常用的颜色：hover的绿色
+@gre: #35b558;
+@l-gre: #f3fff6;
+@red: #ff5c00;
+@l1-black: #e8e8e8;
+.transform(@color: #fff, @bg: #fff) {
+    color: @color;
+    background: @bg;
+    transition-duration: 0.8s;
+    transition-property: background;
+    transform: translateZ(0);
+}
+
+.pointer() {
+    cursor: pointer;
+}
+
+// 价格container方便代码的查看和修改
+.container {
+    .mt(@top: 10px) {
+        margin-top: @top!important;
+    }
+    .mr(@right: 10px) {
+        margin-right: @right!important;
+    }
+    .mb(@bottom: 10px) {
+        margin-bottom: @bottom!important;
+    }
+    .ml(@left: 10px) {
+        margin-left: @left!important;
+    }
+    .mar-t10 {
+        .mt();
+    }
+    .mar-t20 {
+        .mt(20px);
+    }
+    .mar-t30 {
+        .mt(30px);
+    }
+    .mar-t40 {
+        .mt(40px);
+    }
+    .mar-t50 {
+        .mt(50px);
+    }
+    .mar-t60 {
+        .mt(60px);
+    }
+    .mar-t70 {
+        .mt(70px);
+    }
+    .mar-t80 {
+        .mt(80px);
+    }
+    .mar-t90 {
+        .mt(90px);
+    }
+    .mar-l10 {
+        .ml();
+    }
+    .mar-l20 {
+        .ml(20px);
+    }
+    .mar-l25 {
+        .ml(25px);
+    }
+    .mar-l40 {
+        .ml(40px);
+    }
+    .mar-l30 {
+        .ml(30px);
+    }
+    .mar-l70 {
+        .ml(70px);
+    }
+    .mar-l80 {
+        .ml(80px);
+    }
+    .mar-l90 {
+        .ml(90px);
+    }
+    .mar-l100 {
+        .ml(100px);
+    }
+    .mar-r10 {
+        .mr();
+    }
+    .mar-r20 {
+        .mr(20px);
+    }
+    .mar-r25 {
+        .mr(25px);
+    }
+    .mar-r30 {
+        .mr(30px);
+    }
+    .mar-r40 {
+        .mr(40px);
+    }
+    .mar-b10 {
+        .mb();
+    }
+    .mar-b8 {
+        .mb(8px);
+    }
+    .mar-b15 {
+        .mb(15px);
+    }
+    .mar-b40 {
+        .mb(40px);
+    }
+    .mar-b30 {
+        .mb(30px);
+    }
+    .mar-l10 {
+        .ml(10px);
+    }
+    .mar-l20 {
+        .ml(20px);
+    }
+    .mar-l25 {
+        .ml(25px);
+    }
+    .mar-l40 {
+        .ml(40px);
+    }
+    .mar-l30 {
+        .ml(30px);
+    }
+    .mar-l70 {
+        .ml(70px);
+    }
+    .mar-l80 {
+        .ml(80px);
+    }
+    .mar-l90 {
+        .ml(90px);
+    }
+    .mar-l100 {
+        .ml(100px);
+    }
+    .right-45 {
+        right: 45px!important
+    }
+    .f_l {
+        float: left;
+    }
+    .f_r {
+        float: right;
+    }
+    .none {
+        display: none!important;
+    }
+    .cf {
+        zoom: 1;
+    }
+    .cf:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .relative {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .b {
+        font-weight: 700;
+    }
+    .fw_no {
+        font-weight: 400;
+    }
+    .text_under {
+        text-decoration: underline;
+    }
+    .curs {
+        cursor: pointer;
+    }
+    .w-1000 {
+        margin: 0 auto;
+    }
+    .flex {
+        position: fixed!important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff!important;
+        z-index: 900!important;
+        border-bottom: 1px solid @l1-black;
+        box-shadow: rgba(0, 0, 0, 0.1)0 1px 5px;
+    }
+    .loginflex {
+        position: fixed;
+        left: 50%;
+        margin-left: 312px;
+        top: 0;
+        z-index: 1000;
+    }
+    .index-title {
+        font-size: 48px;
+        text-align: center;
+        color: #000;
+        line-height: 80px;
+    }
+    .w-1000 {
+        width: 1000px;
+    }
+    .h1-title {
+        font-size: 24px;
+        color: @gre;
+        line-height: 80px;
+    }
+    .h2-title,
+    h2.h2-title {
+        font-size: 20px;
+        color: #333;
+    }
+    .color-red {
+        color: @red!important;
+    }
+}
+
+// buttton类的组合
+.container {
+    .greenbtn {
+        display: inline-block;
+        border-radius: 3px;
+        font-size: 18px;
+        .transform(#fff, @gre);
+    }
+    .greenbtn:active,
+    .greenbtn:focus,
+    .greenbtn:hover {
+        background: #66d178;
+        color: #fff;
+    }
+    .greenbtn2 {
+        display: inline-block;
+        font-size: 16px;
+        border: 1px solid @gre;
+        .transform(@gre, #f3fff6);
+    }
+    .greenbtn2:active,
+    .greenbtn2:focus,
+    .greenbtn2:hover {
+        background: @gre;
+        color: #fff;
+        border-color: @gre;
+    }
+    .greenbtn3 {
+        display: inline-block;
+        border-radius: 3px;
+        font-size: 18px;
+        .transform(#fff, #7bda95);
+    }
+    .greenbtn3:active,
+    .greenbtn3:focus,
+    .greenbtn3:hover {
+        background: @gre;
+        color: #fff;
+    }
+    .orinagebtn {
+        padding: 5px 20px;
+        border-radius: 3px;
+        .transform(#fff, @red);
+    }
+    .orinagebtn:active,
+    .orinagebtn:focus,
+    .orinagebtn:hover {
+        background: #ff8530;
+    }
+    .garybtn:active,
+    .garybtn:focus,
+    .garybtn:hover {
+        background: #ff7600;
+        color: #000;
+    }
+    .garybtn2 {
+        display: inline-block;
+        font-size: 16px;
+        border: 1px solid @gre;
+        .transform(#000, #ff7600);
+    }
+    .garybtn2:active,
+    .garybtn2:focus,
+    .garybtn2:hover {
+        background: #7F7F7F;
+        color: #ccc;
+    }
+}
+
+// swiper
+.container {
+    .pagination {
+        position: absolute;
+        left: 0;
+        text-align: center;
+        bottom: 15px;
+        width: 100%;
+        z-index: 800;
+    }
+    .pagination-car {
+        left: 10px;
+        top: 230px;
+        width: 160px;
+        position: absolute;
+        z-index: 20;
+        .swiper-pagination-switch {
+            background: none repeat scroll 0 0 #555;
+            border: 1px solid #FFF;
+            border-radius: 8px;
+            display: block;
+            height: 8px;
+            margin: 0 5px;
+            opacity: .8;
+            width: 8px;
+            .container .f_l;
+        }
+        .swiper-active-switch {
+            background: none repeat scroll 0 0 #fff
+        }
+    }
+    .pagination-free,
+    .pagination-v {
+        position: absolute;
+        z-index: 20;
+        left: 10px;
+        top: 10px;
+        .swiper-pagination-switch {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 0 5px;
+            opacity: .8;
+            border: 1px solid #fff;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+    }
+    .pagination-free {
+        width: 140px;
+        left: 10px;
+        top: 230px;
+        .swiper-pagination-switch {
+            display: block;
+            margin: 0 5px;
+            .container .f_l;
+        }
+    }
+    .swiper-active-switch {
+        background: url(../images/swiper2.jpg) center center no-repeat
+    }
+    .swiper-car {
+        height: 110px;
+        width: 100%;
+        .swiper-wrapper a {
+            width: 136px;
+        }
+        .onopen {
+            color: #fff;
+            background: #bbb;
+            font-size: 12px;
+            padding: 3px 5px;
+            position: absolute;
+            z-index: 100;
+            left: 34%;
+            top: 0;
+        }
+        .strategy2 {
+            border: 1px solid #E4E4E4;
+            height: 90px;
+            padding: 20px;
+            position: relative;
+        }
+    }
+    .swiper-car-box {
+        border: 1px solid #E4E4E4;
+        height: 150px;
+        padding: 20px;
+        position: relative;
+    }
+    .swiper-container {
+        height: 305px;
+        width: 100%;
+    }
+    .swiper-container,
+    .swiper-container2 {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        backface-visibility: hidden;
+        z-index: 1;
+    }
+    .swiper-dynamic,
+    .swiper-free,
+    .swiper-v {
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .5);
+        text-align: center;
+        margin-bottom: 30px;
+        h2 {
+            font-style: italic;
+            font-size: 42px;
+            margin-top: 80px;
+            margin-bottom: 0;
+            line-height: 45px;
+        }
+        p {
+            font-style: italic;
+            font-size: 25px;
+        }
+    }
+    .swiper-free-mode>.swiper-wrapper {
+        transition-timing-function: ease-out;
+        margin: 0 auto;
+    }
+    .swiper-pagination-switch {
+        display: inline-block;
+        width: 39px;
+        height: 7px;
+        background: url(../images/swiper1.jpg) center center no-repeat;
+        margin: 0 6px;
+        cursor: pointer;
+    }
+    .swiper-slide {
+        .container .f_l;
+        position: relative;
+        text-align: center;
+        height: 305px!important;
+        .swiper-box {
+            width: 570px;
+            margin: 0 auto;
+            height: 305px;
+            padding-top: 50px;
+            padding-left: 50px;
+            text-align: left;
+            h2 {
+                font-size: 50px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+            .banner-infor {
+                font-size: 20px;
+                font-weight: 400;
+                color: #eee;
+                margin-bottom: 30px;
+            }
+            .banner-infor2 {
+                font-size: 16px;
+                font-weight: 400;
+                color: #eee;
+            }
+        }
+    }
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        transition-property: transform, left, top;
+        transition-duration: 0s;
+        transform: translate3d(0px, 0, 0);
+        transition-timing-function: ease;
+        width: 3194.66px;
+        height: 50px;
+        a img {
+            width: 110px;
+        }
+    }
+}
+
+// 图片左右滑动效果样式表
+.container {
+    #banner-left,
+    #banner-left2,
+    #banner-left3,
+    #banner-left4,
+    #banner-right,
+    #banner-right2,
+    #banner-right3,
+    #banner-right4 {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -25px;
+        z-index: 800;
+        cursor: pointer;
+    }
+    #banner-left,
+    #banner-left2,
+    #banner-left3,
+    #banner-left4 {
+        left: 0;
+    }
+    #banner-right,
+    #banner-right2,
+    #banner-right3,
+    #banner-right4  {
+        right: 0;
+    }
+    .pos() {
+        width: 40px;
+        height: 50px;
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .arrow-left {
+        background: url(../images/banner-left.png) -10px -5px no-repeat;
+        .pos();
+    }
+    .arrow-left2 {
+        background: url(../images/banner-left.png) -10px -65px no-repeat;
+        .pos();
+    }
+    .arrow-right {
+        background: url(../images/banner-right.png) -10px -5px no-repeat;
+        .pos();
+    }
+    .arrow-right2 {
+        background: url(../images/banner-right.png) -10px -65px no-repeat;
+        .pos();
+    }
+}
+
+// 其他一些基本样式
+.lesson-flex {
+    position: fixed!important;
+    left: 50%;
+    margin-left: -500px;
+    z-index: 300
+}
+
+.flex {
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff!important;
+    z-index: 900!important;
+    border-bottom: 1px solid @l1-black;
+    box-shadow: rgba(0, 0, 0, .1)0 1px 5px;
+}
+
+.loginflex {
+    position: fixed;
+    left: 50%;
+    margin-left: 312px;
+    top: 0;
+    z-index: 1000;
+}
+
+.index-title {
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+    line-height: 80px;
+}
+
+.h1-title {
+    font-size: 24px;
+    color: @gre;
+    line-height: 80px;
+}
+
+.h2-title,
+h2.h2-title {
+    font-size: 20px;
+    color: #333;
+}
+
+.color-red {
+    color: #ff5c00!important;
+}

@@ -1,0 +1,255 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+/*将模型左右居中显示*/
+.wrapper {
+    width: 305px;
+    height: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*采用relative可以实现左右居中*/
+.bird {
+    position: relative;
+}
+
+/*红色的头*/
+
+.bird .head:before,
+.bird .head:after {
+    content: ' ';
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #ee0007;
+    /*径向的颜色渐变 暂时只兼容chrome*/
+    /*box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.45);*/
+}
+
+.bird .head:before {
+    background: -webkit-radial-gradient(right top, #fff 10%, #aa2227 20%, #ce2220 75%, #000);
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    z-index: -2;
+}
+/*下面缺的部分被覆盖*/
+.bird .head:after {
+    background-color: #fff;
+    position: absolute;
+    top: 224px;
+    left: 0px;
+    border: none;
+    z-index: -1;
+}
+
+
+/*左边眉毛*/
+
+.meiOne {
+    top: 90px;
+    left: 10px;
+    width: 10px;
+    height: 12px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 6;
+    border: 5px solid #000;
+    border-left-width: 150px;
+    border-color: transparent transparent transparent #000;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+}
+/*右边眉毛*/
+.meiTwo {
+    top: 90px;
+    left: 133px;
+    width: 10px;
+    height: 12px;
+    background-color: transparent;
+    position: absolute;
+    border: 5px solid #000;
+    border-right-width: 150px;
+    border-color: transparent #000 transparent transparent;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    z-index: 6;
+}
+
+
+/*眼珠*/
+
+.bird .eyes .eye .black {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 110px;
+}
+
+.bird .eyes {
+    position: absolute;
+    left: 45px;
+    top: 100px;
+}
+
+.bird .eyes .left {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #000;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 10px;
+    border-radius: 50%;
+}
+
+.bird .eyes .right {
+    left: 110px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #000;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-right-width: 10px;
+    border-radius: 50%;
+}
+
+.bird .eyes .eye .bleft {
+    top: 30px;
+    left: 47px;
+    animation: myfirst 5s infinite;
+    -moz-animation: myfirst 5s infinite;
+}
+/*左边眼睛的动画 制作了chorme的兼容版本*/
+@keyframes myfirst {
+    0% {
+        top: 30px;
+        left: 47px;
+    }
+    25% {
+        top: 50px;
+        left: 35px;
+    }
+    50% {
+        top: 30px;
+        left: 22px;
+    }
+    75% {
+        top: 20px;
+        left: 27px;
+    }
+    100% {
+        top: 30px;
+        left: 47px;
+    }
+}
+
+.bird .eyes .eye .bright {
+    top: 30px;
+    left: 25px;
+    animation: mysecond 5s infinite;
+    -moz-animation: mysecond 5s infinite;
+}
+/*右边眼睛的动画 制作了chorme的兼容版本*/
+@keyframes mysecond {
+    0% {
+        top: 30px;
+        left: 25px;
+    }
+    25% {
+        top: 40px;
+        left: 37px;
+    }
+    50% {
+        top: 30px;
+        left: 47px;
+    }
+    75% {
+        top: 20px;
+        left: 37px;
+    }
+    100% {
+        top: 30px;
+        left: 25px;
+    }
+}
+/*上面的嘴*/
+.mouseOne {
+    left: 74px;
+    top: 80px;
+    border: 80px solid rgb(232, 217, 23);
+    position: absolute;
+    border-color: transparent transparent rgb(232, 217, 23) transparent;
+}
+/*下面最大的嘴*/
+.mouseTwo {
+    left: 83px;
+    top: 240px;
+    border: 70px solid rgb(232, 217, 23);
+    border-top-width: 50px;
+    border-bottom-width: 50px;
+    position: absolute;
+    border-color: rgb(232, 217, 23) transparent transparent transparent;
+}
+/*下面嘴中间的部分*/
+.mouseThree {
+    left: 92px;
+    top: 240px;
+    border: 60px solid #640606;
+    border-top-width: 40px;
+    border-bottom-width: 40px;
+    position: absolute;
+    border-color: #640606 transparent transparent transparent;
+}
+/*嘴的最内部*/
+.mouseFour {
+    left: 110px;
+    top: 240px;
+    border: 40px solid #E33333;
+    border-top-width: 30px;
+    border-bottom-width: 30px;
+    position: absolute;
+    border-color: #E33333 transparent transparent transparent;
+}
+
+/*头发的造型 确实很难看。。。*/
+.hair {
+    width: 90px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 18px solid #000;
+    position: absolute;
+    left: 97px;
+    top: -10px;
+    -webkit-transform: rotate(80deg);
+}
+
+.left_hair_one {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 12px solid #000;
+    position: absolute;
+    left: 77px;
+    top: 7px;
+    -webkit-transform: rotate(37deg);
+}
+
+.left_hair_two {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-top: 8px solid #000;
+    position: absolute;
+    left: 105px;
+    top: 20px;
+    -webkit-transform: rotate(35deg);
+}

@@ -1,0 +1,371 @@
+body,
+h1,
+p,
+img,
+ul,
+li,
+h2,
+i,
+span,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+.bold{
+    font-weight: bold;
+    color: #4e3222;
+}
+#header {
+    padding: 0 30px;
+    margin: 0 auto;
+    min-width: 800px;
+    height: 205px;
+    background-color: #eeebe0;
+}
+
+#header .top {
+    margin: 0 auto;
+    width: 800px;
+    height: 70px;
+}
+
+#header .top .logo {
+    margin-top: 15px;
+    width: 233px;
+    float: left;
+}
+
+#header .top .nav {
+    background: url(../images/icons.png) no-repeat;
+    margin-top: 15px;
+    height: 70px;
+    width: 420px;
+    float: right;
+}
+
+#header .navlist {
+    margin-right: 25px;
+    margin-top: 15px;
+    float: right;
+    height: 40px;
+    width: 360px;
+    border-radius: 8px;
+    background-color: #55482c;
+}
+
+#header .navlist ul li{
+    line-height: 40px;
+    width: 89px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    border-left: 1px solid #665b41;
+}
+
+#header .navlist ul li a{
+    text-decoration: none;
+    color: #ece8d7;
+}
+
+#header .navlist ul li a:hover{
+    text-decoration: underline;
+    color: #00f;
+}
+#header .navlist ul li.first {
+    border-left-width: 0;
+}
+
+
+/*花边样式*/
+
+#header .flower {
+    margin: 0 auto;
+    height: 120px;
+    width: 860px;
+    background: url(../images/flower.png) no-repeat;
+}
+
+
+/*内容区域*/
+
+#content {
+    padding: 0 30px;
+    margin: 0 auto;
+    min-width: 800px;
+    height: 860px;
+    background-color: #dfd9c5;
+}
+
+
+/*使用position ：relative 可以是元素显示出来*/
+
+#content .container {
+    border-radius: 15px;
+    position: relative;
+    top: -59px;
+    margin: 0 auto;
+    width: 800px;
+    height: 954px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+#content .container .middle {
+    display: inline-block;
+    width: 503px;
+    padding: 37px;
+}
+
+#content .container .middle p {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+#content .container .middle h5{
+    font-family: "Times New Roman";
+    margin-top: 5px;
+    font-size: 12px;
+    color: #307d34;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#content .heading{
+    margin-top: 20px;
+    height: 24px;
+}
+#content .heading h2 {
+    font-family: "Times New Roman";
+    font-size: 24px;
+    float: left;
+}
+
+#content .heading div {
+    margin-right: 15px;
+    height: 40px;
+    font-size: 12px;
+    float: right;
+}
+
+
+#content .container .heading i {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: #538c2e;
+}
+
+#content .container .heading h6 {
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    color: #db7037;
+}
+
+
+#content .container .imging{
+    margin-top: 20px;
+    width: 496px;
+    height: 193px;
+    border-radius: 10px;
+    background-color: #ece5d0;
+}
+
+
+#content .container .imging img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+#content .container .reading{
+    height: 14px;
+}
+#content .container .reading a{
+    font-family: "Times New Roman";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: #db6e35;
+    float: right;
+}
+
+#content .container .reading span{
+    margin-left: 5px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #db6e35;
+}
+#content .container  .p{
+    margin-top: 5px;
+    color: #888;
+}
+
+
+#content .container .downlist{
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}
+#content .container .downlist input{
+    background-color: #fff;
+    border: 0px;
+    box-shadow: none;
+}
+
+#content .container .downlist ul li{
+    font-family: "Times New Roman";
+    width: 30px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    border-left: 1px solid #bbb;
+}
+
+#content .container .downlist ul li.first{
+    border-left-width: 0;
+    margin-left: 10px;
+}
+#content .container .downlist .leftspan{
+    float: left;
+}
+
+#content .container .downlist .rightspan{
+    float: right;
+}
+
+
+
+/*内容右侧的样式*/
+#content .container .right{
+    float: right;
+    margin-right: 10px;
+    height: 860px;
+    text-align: center;
+    width: 200px;
+}
+#content .container .right h2{
+    font-family: "Times New Roman";
+    font-size: 24px;
+    font-weight: bold;
+    color: #47443a;
+    margin-top: 90px;
+}
+
+#content .container .right h2.recent{
+    margin-top: 40px;
+}
+#content .container .right .reading a{
+    margin-top: 20px;
+    margin-left: 5px;
+    float: left;
+}
+
+#content .container .right  ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Times New Roman";
+    margin-top: 10px;
+    font-size: 12px;
+    list-style: none;
+    text-align: left;
+    color: #307d34;
+}
+
+
+#content .container .right  ul li .p{
+    margin-top: -2px;
+}
+
+#content .container .right ul li.first{
+    margin-top: 40px;
+}
+/*底部样式*/
+
+#footer {
+    margin: 0 auto;
+    min-width: 800px;
+    height: 232px;
+    background-color: #54472a;
+}
+
+#footer .morinfo {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: 704px;
+    height: 204px;
+}
+
+#footer .morinfo .aboutus,
+#footer .morinfo .sitepage,
+#footer .morinfo .help {
+    float: left;
+}
+
+#footer .morinfo .aboutus {
+    width: 270px;
+}
+
+#footer .morinfo .sitepage {
+    text-align: left;
+    margin-left: 101px;
+    width: 114px;
+}
+
+#footer .morinfo .help {
+    text-align: left;
+    width: 114px;
+    margin-left: 100px;
+}
+
+#footer .morinfo h1 {
+    margin-top: 51px;
+    font-size: 24px;
+    color: #fff;
+}
+
+#footer .morinfo ul li {
+    margin-top: 9px;
+    margin-left: 10px;
+    list-style: none;
+    font-size: 14px;
+}
+
+#footer .morinfo ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#footer .morinfo p {
+    font-size: 12px;
+    color: #fff;
+}
+
+#footer .morinfo p.info {
+    text-align: center;
+    margin-top: 12px;
+}
+
+#footer .bottom {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    color: #888;
+    background-color: #3b321d;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+}

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*头部的导航栏目*/
+
+.header {
+    margin: 10px auto;
+}
+
+
+/*第一种情况的样式*/
+
+.article_first {
+    overflow: hidden; /*保证过长的部分隐藏*/
+}
+
+.article_first .left {
+    background-color: #033;
+    float: left;
+    width: 150px;
+    margin-right: 5px;
+    margin-left: -100%;/*位置置左*/
+    margin-bottom: -9999px;/*保证等高*/
+    padding-bottom: 9999px;/*保证等高*/
+}
+
+.article_first .right {
+    width: 100px;
+    background-color: #033;
+    float: left;
+    margin-left: -100px;/*位置置右*/
+    margin-bottom: -9999px;/*保证等高*/
+    padding-bottom: 9999px;/*保证等高*/
+}
+
+.article_first .middle {
+    float: left;
+    width: 100%;
+    margin-bottom: -9999px;/*保证等高*/
+    padding-bottom: 9999px;/*保证等高*/
+}
+
+
+/*设置主要内容显示区域的边界*/
+
+.inner_first {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+
+/*以下情况类似*/
+
+
+/*第二种情况的样式*/
+
+.article_second {
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.article_second .main_left {
+    float: left;
+    width: 100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.inner_second {
+    margin-right: 100px;
+}
+
+.article_second .other_right {
+    width: 100px;
+    background-color: #38f;
+    float: left;
+    margin-left: -100px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+
+/*第三种情况的样式*/
+
+.article_third {
+    overflow: hidden;
+}
+
+.article_third .other_left {
+    background-color: #f38;
+    float: left;
+    color: white;
+    width: 150px;
+    margin-right: 5px;
+    margin-left: -100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.article_third .main_right {
+    float: left;
+    width: 100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.inner_third {
+    margin-left: 150px;
+}
+
+
+/*底部信息*/
+
+.footer {
+    margin: 20px;
+    font-size: 13px;
+}

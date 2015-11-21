@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="row" class="row">
+            <p id="tips"><%= tips %></p>
+            <div class="input-group password">
+                <span class="input-group-addon" id="basic-addon1">
+					<img src="./images/head.png">
+                </span>
+                <input type="text" id="name"  class="form-control changeh" placeholder="用户名/手机/邮箱" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group password">
+                <span class="input-group-addon" id="basic-addon1">
+					<img src="./images/lock.png">
+                </span>
+                <input type="password" class="form-control changeh" id="password" placeholder="密码" aria-describedby="basic-addon1">
+            </div>
+            <div>
+                <input type="checkbox" checked="checked">
+                <label>下次自助登录</label>
+                <a class="right" href="">忘记密码？</a>
+            </div>
+            <div><button type="button" class="btn-danger" id="submit">登录</button></div>
+            <div class="account">
+                <a class="right" href="">立即注册</a>
+            </div>
+            <div class="middle">
+                <label>使用已有社交帐号登录</label>
+            </div>
+            <div class="middle bottom">
+                <a href=""><img src="./images/qq.png"></a>
+                <a href=""><img src="./images/weixin.png"></a>
+                <a href=""><img src="./images/weibo.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./javascripts/login.js"></script>
+</body>
+
+</html>

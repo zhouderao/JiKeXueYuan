@@ -1,0 +1,19 @@
+.container {
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fdf;
+    font-size: 20px;
+    width: 400px;
+    margin: 100px auto 0 auto;
+}
+
+#array {
+	height: 25px;
+    width: 400px;
+}
+input{
+	text-align: center;
+}
+.btn{
+	margin-left: 300px;
+}

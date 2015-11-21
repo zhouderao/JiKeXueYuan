@@ -1,0 +1,197 @@
+// 头部的样式表
+#header {
+    .user-center {
+        a:hover {
+            background: #444
+        }
+    }
+    .loginbox span a:hover {
+        color: #333
+    }
+    .search-section {
+        .search-btn:hover {
+            background: @gre url(../images/topsearch-icon2.png) center center no-repeat !important;
+        }
+    }
+}
+
+#header>.wrap:after {
+    display: table;
+    clear: both;
+    content: " "
+}
+
+// 首条导航栏
+.nav {
+    a:hover {
+        color: @gre;
+    }
+}
+
+// 导航栏目下部分的样式
+// 左侧分类导航的样式表
+.lesson-classfiy-nav {
+    li:last-child>div:hover {
+        border-bottom: 0;
+        box-shadow: none;
+    }
+    ul:hover{
+        background-color: #fff;
+    }
+    li>div:hover {
+        background-color: #fff;
+        color: #333;
+        border-top: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        margin-left: -2px;
+        height: 38px;
+        margin-top: -1px;
+        border-left: 2px solid @gre;
+        padding-left: 18px;
+        border-right: 3px solid #fff;
+        width: 213px;
+        background: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    }
+    li>div:hover .lesson-list-show {
+        display: block;
+    }
+    li .lesson-list-show dd a.active,
+    li .lesson-list-show dt>a.active {
+        color: @gre;
+    }
+    li .lesson-list-show dd {
+        list-style: none;
+        margin-left: -8px;
+        padding: 3px 0;
+    }
+    li .lesson-list-show a:hover {
+        color: @gre;
+    }
+}
+
+// 课程右侧的信息栏目
+.lesson-right-show {
+    .free-box {
+        button:active,
+        button:focus,
+        button:hover {
+            background: @gre;
+            color: #fff;
+            border-color: @gre;
+        }
+    }
+}
+
+#page-nav {
+    a.no:hover {
+        cursor: default;
+        background: #fff;
+        color: #999;
+        border: 0;
+        line-height: 30px;
+        border: 1px solid #e4e4e4;
+    }
+    button:hover {
+        border-color: @gre;
+    }
+    a:hover {
+        line-height: 30px;
+        border: 1px solid @gre;
+    }
+}
+
+// 热门课程的样式表
+.hot-lesson {
+    li:hover {
+        border-bottom: 2px solid @gre;
+        color: @gre;
+    }
+}
+
+
+/*职业路径图的样式表*/
+
+.learn-card {
+    a:hover {
+        .greenbtn2 {
+            background: @gre;
+            color: #fff;
+            outline: 0;
+        }
+        #Waiting-btn {
+            background: #ddd;
+            outline: 0;
+        }
+    }
+}
+
+
+/*知识体系图样式表*/
+
+.card-transform:hover {
+    .front {
+        transform: rotateY(180deg);
+    }
+    .back {
+        transform: rotateY(0deg);
+    }
+}
+
+// 底部的信息
+#footer {
+    .jkinfor {
+        a:hover {
+            color: @gre;
+        }
+    }
+    .app-download a:hover {
+        p,
+        strong {
+            color: @gre;
+        }
+    }
+    a.qq-icon:hover {
+        background-position: -23px -122px;
+        .weinxinpop {
+            display: block;
+        }
+    }
+    a.tieba-icon:hover {
+        background-position: -145px -40px;
+    }
+    .share {
+        a.sina-icon:hover {
+            background-position: -23px -40px;
+        }
+    }
+    .share:after {
+        display: table;
+        clear: both;
+        content: " ";
+    }
+}
+
+// 右侧的导航栏
+.gotop {
+    span.top:hover {
+        background: url(../images/gotop2.jpg) 0 0 no-repeat;
+        background-position: 0 0;
+        background-size: 34px 103px;
+    }
+    span.jk-app:hover {
+        background: #f7f7f7 url(../images/phone-2.png) center center no-repeat;
+        background-size: 12px 24px;
+    }
+    span.jk-app:hover .appewm {
+        display: block;
+    }
+    span.erwma:hover {
+        background: url(../images/gotop2.jpg) 0 -34px no-repeat;
+        background-size: 34px 103px;
+    }
+    a.diaocha:hover {
+        background: url(../images/gotop2.jpg) 0 -68px no-repeat;
+        background-size: 34px 101px;
+    }
+}

@@ -1,0 +1,20 @@
+div{
+	padding-left: 20px;
+	border-radius: 10px;
+	background-color: #eee;
+}
+div:hover{
+	background-color: #fcf;
+}
+h3{
+	border-radius: 5px;
+}
+
+footer{
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 20px;
+	min-height: 20px;
+	background-color: #d1d1d1;
+	text-align: center;
+}

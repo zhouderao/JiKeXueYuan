@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hao123_上网从这里开始</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+
+<body>
+    <!-- 整个主体盒子 -->
+    <div id="wrapper">
+        <!-- 最顶部的设置栏目 -->
+        <div id="top" style="display:none">
+            <div>
+                <select id="roleId" onchange="selectChange()">
+                    <option value="1" selected="selected">整个背景</option>
+                    <option value="2">选择框背景</option>
+                    <option value="3">底部背景</option>
+                    <option value="4">有色链接</option>
+                </select>
+            </div>
+            <button id="red" class="selectcolor" value="red" onclick="changeColor(this.value)"></button>
+            <button id="blue" class="selectcolor" value="blue" onclick="changeColor(this.value)"></button>
+            <button id="green" class="selectcolor" value="green" onclick="changeColor(this.value)"></button>
+            <button id="aqua" class="selectcolor" value="aqua" onclick="changeColor(this.value)"></button>
+            <button id="orange" class="selectcolor" value="orange" onclick="changeColor(this.value)"></button>
+        </div>
+        <!-- 头部的导航栏目 -->
+        <nav class="width-fix">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="图标"></a>
+            </div>
+            <div class="todayinfo">
+                <div class="sethome">
+                    <a href="#">
+                        <span class="js_text">设为首页</span>
+                    </a>
+                </div>
+                <div class="city_weather">
+                    <a href="#" class="city">
+                        <span class="wuhan">武汉</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <a href="#" class="weather">
+                        <span class="weaIcon"></span>
+                        <span class="nowWea">多云</span>
+                        <span class="temprature">12℃</span>
+                    </a>
+                </div>
+                <div class="canlendar">
+                    <a href="#" class="">
+                        <span class="">14</span>
+                        <span class="">10月14日</span>
+                        <span class="">周三</span>
+                    </a>
+                </div>
+            </div>
+            <div class="advertise">
+                <p>Tips:请点击换肤设置</p>
+            </div>
+            <div class="setting">
+                <div class="email">
+                    <a class="link" href="#">
+                        <span class="text">邮箱</span>
+                    </a>
+                </div>
+                <div class="email">
+                    <a class="link browser" href="#">
+                        <span class="text">浏览器</span>
+                    </a>
+                </div>
+                <div class="email">
+                    <a class="link skin" onclick="showTop()" href="#">
+                        <span class="text">换肤</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- 百度搜索的框体 -->
+        <div class="width-fix search">
+            <div class="search-con">
+                <div class="baidu_logo">
+                    <img src="images/baidu.png" alt="">
+                </div>
+                <form action="#">
+                    <input type="text" autofocus class="input-txt">
+                    <input type="button" class="input-btn" value="百度一下">
+                </form>
+            </div>
+        </div>
+        <!-- 热门搜索话题 -->
+        <div class="hotsearch-con">
+            <div class="hotNew">
+                <ul class="boxhot">
+                    <li class="first"><a href="#">热搜:</a></li>
+                    <li><a href="#">武汉天气</a></li>
+                    <li><a href="#">港囧</a></li>
+                    <li><a href="#">云中歌</a></li>
+                    <li><a href="#">琅琊榜</a></li>
+                    <li><a href="#">点击换肤</a></li>
+                    <li><a href="#">点击换肤</a></li>
+                    <li><a href="#">点击换肤</a></li>
+                </ul>
+                <a class="more" href="">更多</a>
+            </div>
+        </div>
+
+        <!-- 这个下部的产品栏目 -->
+        <div class="width-fix product">
+            <ul class="pro_nav">
+                <li class="first"><a href="#"><span>首页</span></a></li>
+                <li><a href="#">电视剧</a></li>
+                <li><a href="#">最新电影</a></li>
+                <li><a href="#">新闻头条</a></li>
+                <li><a href="#">八卦新闻</a></li>
+                <li><a href="#">军事热点</a></li>
+                <li><a href="#">热门游戏</a></li>
+                <li><a href="#">小游戏</a></li>
+                <li><a href="#">今日特价</a></li>
+                <li><a href="#">特价旅游</a></li>
+                <li><a href="#">生活服务</a></li>
+            </ul>
+            <div class="inner_container">
+                <div class="left">
+                    <div class="hotpot">
+                        <div>
+                            <img src="images/news.jpg">
+                        </div>
+                        <div class="hotlink">
+                            <a href="#">Hello Kitty送你蜜粉拍立得，真的有！</a>
+                            <a href="#">辽宁“天价豆腐”368元 老板：蟹肉做的</a>
+                        </div>
+                    </div>
+                    <div class="sort">
+                        <ul>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-tv"></i>
+                                        <a href="#">电视剧</a>
+                                        <span class="split">|</span>
+                                        <a href="#/">综艺</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-game"></i>
+                                        <a href="#/">游戏</a>
+                                        <span class="split">|</span>
+                                        <a href="http://xyx.hao123.com/" title="小游戏" class="">小游戏</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-movie"></i>
+                                        <a href="#" title="电影">电影</a>
+                                        <span class="split">|</span>
+                                        <a href="#">直播
+                                    </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-comic"></i>
+                                        <a href="#" title="动画">动画</a>
+                                        <span class="split">|</span>
+                                        <a href="#">漫画</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-toutiao"></i>
+                                        <a href="#">头条</a>
+                                        <span class="split">|</span>
+                                        <a href="#">军事</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-travel"></i>
+                                        <a href="#">旅游</a>
+                                        <span class="split">|</span>
+                                        <a href="#" title="门票">门票</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-caipiao"></i>
+                                        <a href="#">彩票</a>
+                                        <span class="split">|</span>
+                                        <a href="#">股票</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-gaoxiao"></i>
+                                        <a href="#">搞笑</a>
+                                        <span class="split">|</span>
+                                        <a href="#">小说</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-tuan"></i>
+                                        <a href="#" title="特价">特价</a>
+                                        <span class="split">|</span>
+                                        <a href="#">海淘</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-music"></i>
+                                        <a href="#">教育</a>
+                                        <span class="split">|</span>
+                                        <a href="#">理财</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-life g_hot"></i>
+                                        <a href="#" class="g_red">生活</a>
+                                        <span class="split">|</span>
+                                        <a href="#">天气</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="startbar-list">
+                                <div class="g_clr baritem">
+                                    <div class="category">
+                                        <i class="star-icon i-food"></i>
+                                        <a href="#">美食</a>
+                                        <span class="split">|</span>
+                                        <a href="#">音乐</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="site-manage" title="添加网址"></div>
+                    <ul class="site-bd">
+                        <li class="site-item">
+                            <a href="#" class="comicon baidu">百度
+                            </a>•
+                            <a href="#" class="second">贴吧</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon xinlang">新浪</a>•
+                            <a href="#" class="second">微博</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon souhu">搜狐</a>•
+                            <a href="#" class="second">热点</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon tengxu">腾　讯</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon wangyi">网　易</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon aiqiyi">爱奇艺高清</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon tianmao">天　猫</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon fenghuang">凤 凰 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon taobao">淘 宝 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon mianfei">免费游戏</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon youxi">4399游戏</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon xinhua">新华</a>•
+                            <a href="#" class="second">人民</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon jingdong">京东商城</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon juhuasuan">聚 划 算</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon jinri">今日特价</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon yingshi">影视</a>•
+                            <a href="#" class="second">爸爸3</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon qiche">汽车之家</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="comicon qunaer">去 哪 儿</a>
+                        </li>
+                        <li title="添加网址" class="site-item-add-short">
+                            <i></i>
+                        </li>
+                    </ul>
+                    <ul class="site-bd site-nobd">
+                        <li class="site-item">
+                            <a href="#">东方理财
+                            </a>•
+                            <a href="#" class="second">理财</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">58 同城</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="orange">搜 房 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">携程旅行网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">PPTV聚力</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">机票
+                            </a>•
+                            <a href="#" class="second">12306</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">聚美优品</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">赶 集 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">易 车 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">彩票开奖</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">爱卡汽车</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">美  拍</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">唯 品 会</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">同程旅游</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">途牛旅游网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">百度浏览器</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">太平洋汽车</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">艺 龙 网</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">百度糯米</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">蘑 菇 街</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">hao到家</a>•
+                            <a href="#" class="second">学习</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">陆金所理财</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">萌主页</a>•
+                            <a href="#" class="second">动漫</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#">购物
+                            </a>•
+                            <a href="#" class="second">海淘</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="green">苏宁易购</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="green">国美在线</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="orange">什么值得买</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="green">1 号 店</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="green">爱 淘 宝</a>
+                        </li>
+                        <li class="site-item">
+                            <a href="#" class="orange">飞牛网商城</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 底部的信息 -->
+        <div class="bottom" id="bottom">
+            <div>
+                @极客学院 Web就业班3期3班周饶
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>

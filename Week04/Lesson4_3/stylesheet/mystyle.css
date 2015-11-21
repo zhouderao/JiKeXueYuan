@@ -1,0 +1,681 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font: 12px arial;
+    background-color: #fff;
+}
+
+body,
+p,
+form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+form {
+    position: relative;
+}
+
+
+/*最外层盒子*/
+
+#wrapper {
+    min-width: 810px;
+    min-height: 600px;
+    height: 100%;
+    position: relative;
+    /*布局定位*/
+    text-align: center;
+}
+
+
+/*
+    设置中间部分的布局
+*/
+
+#content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top: 38.2%;
+}
+
+
+/*
+    图片与输入窗体的设置
+*/
+
+#content_wrapper {
+    position: relative;
+    margin: 0 auto;
+    top: -191px;
+    /*使用反向向上*/
+}
+
+
+/*百度logo*/
+
+#logo {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+/*设置logo尺寸*/
+
+#logo img {
+    width: 270px;
+    height: 129px;
+}
+
+#logo .hidden {
+    display: none;
+}
+
+
+/*form的尺寸*/
+
+#form {
+    margin: 22px auto 0;
+    width: 641px;
+    height: 37px;
+    text-align: left;
+    border: 0;
+}
+
+
+/*输入框外侧的文本框*/
+
+#txtspn {
+    height: 34px;
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    /*右边的边框不显示*/
+    position: relative;
+    margin-right: 0;
+    float: left;
+}
+
+
+/*输入框*/
+
+#txt {
+    position: relative;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+
+/*鼠标划过事件 改变边框颜色*/
+
+#txtspn:hover {
+    border-color: #888;
+}
+
+
+/*提交按钮的父span框*/
+
+#smspn {
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    background-position: -120px, -48px;
+    vertical-align: top;
+    float: left;
+}
+
+
+/*提交按钮*/
+
+#sbmt {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 0;
+    border-bottom: 1px solid #2d78f4;
+    *border: 1px solid #2d78f4;
+    /*ie6和7的边框没和文本框对齐 （加上border以解决）*/
+    outline: medium;
+}
+
+
+/*改变鼠标划过时的样式*/
+
+#sbmt:hover {
+    cursor: pointer;
+    /*手型*/
+}
+
+
+/*导航条*/
+
+#ul {
+    z-index: 2;
+    position: absolute;
+    color: #fff;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 96px 0 0;
+}
+
+
+/*从新闻到设置的样式*/
+
+#ul a.nav,
+#ul a.login,
+#ul a.setNav {
+    float: left;
+    /*向左浮动*/
+    color: #333;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+#ul .navcontainer a.hidden {
+    display: none;
+}
+
+
+/*字体加粗*/
+
+#ul a.nav {
+    font-weight: bold;
+}
+
+
+/*线性布局块 后面的更多产品能拜访进来*/
+
+#ul a.login,
+#ul a.setNav {
+    display: inline-block;
+}
+
+
+/*右边更多产品导航栏的链接*/
+
+#ul a.mpNav {
+    display: block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #fff;
+    background-color: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+
+/*设置所在的区域*/
+
+#ul .setHover {
+    display: inline;
+    /*块级元素改为线性元素*/
+    min-width: 60px;
+    min-height: 100px;
+    z-index: 302;
+    /*保持最上层*/
+}
+
+
+/*鼠标划过改变颜色*/
+
+#ul a.nav:hover {
+    color: #00f;
+}
+
+
+/*鼠标划过改变颜色*/
+
+#ul a.login:hover {
+    color: #00f;
+}
+
+
+/*隐藏设置的其他栏目*/
+
+.morSet {
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: 71px;
+}
+
+
+/*给箭头留出位置*/
+
+.settingContainer {
+    margin-top: 10px;
+}
+
+
+/*伪类 改变北京颜色*/
+
+#ul .setHover:hover .settingContainer a:hover {
+    background-color: #38f;
+    border-color: #38f;
+}
+
+
+/*改变设置链接的按钮*/
+
+#ul .setHover a.setNav:hover {
+    color: #00f;
+}
+
+
+/*鼠标划过显示*/
+
+#ul .setHover:hover .morSet {
+    display: block;
+}
+
+
+/*设置里的a标签的样式*/
+
+.morSet div a {
+    color: #000;
+    padding: 0 11px;
+    line-height: 26px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*阴影效果*/
+
+.settingContainer {
+    border: 1px solid #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+}
+
+
+/*箭头*/
+
+.tag {
+    background: #00f;
+    border-radius: 8px;
+    position: relative;
+}
+
+
+/* 箭头 - :before and :after, 一起组成了好看的气泡小箭头 */
+
+.tag:before {
+    position: absolute;
+    display: inline-block;
+    border-left: 9px solid transparent;
+    border-bottom: 9px solid #00f;
+    border-right: 9px solid transparent;
+    border-bottom-color: #d1d1d1;
+    left: 26px;
+    top: -2px;
+    content: '';
+}
+
+
+/* 背景阴影*/
+
+.tag:after {
+    position: absolute;
+    display: inline-block;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-right: 8px solid transparent;
+    left: 27px;
+    top: 0px;
+    content: '';
+}
+
+
+/*更多产品的导航栏*/
+
+.morPro {
+    display: none;
+    width: 85px;
+    opacity: 1;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    overflow: hidden;
+    border-left: 1px solid #e7e7e7;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: -19px;
+}
+
+
+/*更多产品的样式*/
+
+#wrapper .mpDiv {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+
+
+/*产品的框体*/
+
+#wrapper .pro_container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*相应里面a的样式*/
+
+#wrapper .bdmainlink a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#wrapper .bdmainlink a.hidden {
+    display: none;
+}
+
+
+/*图片的显示*/
+
+.pro_container span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url(../image/icon.png) no-repeat;
+    cursor: pointer;
+}
+
+
+/*雪碧图的方式截取图片*/
+
+.pro_container span.item_2 {
+    background-position: -36px 0;
+}
+
+.pro_container span.item_3 {
+    background-position: -72px 0;
+}
+
+.pro_container span.item_4 {
+    background-position: -112px 0;
+}
+
+.pro_container span.item_5 {
+    background-position: -148px 0;
+}
+
+.pro_container span.item_6 {
+    background-position: -184px 0;
+}
+
+
+/*鼠标划过事件*/
+
+#ul .mpHover:hover .morPro {
+    display: block;
+}
+
+
+/*鼠标划过事件 实现导航栏的效果*/
+
+#ul .mpHover:hover .morPro a:hover {
+    text-decoration: underline;
+}
+
+
+/*底部信息的样式*/
+
+#footer {
+    height: 100px;
+    position: absolute;
+    bottom: 44px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    *left: 0;
+    /*修复居中的显示*/
+}
+
+#lh {
+    margin: 16px 0 5px;
+}
+
+#lh a,
+#lh a:visited {
+    margin: 0 10px;
+    color: #00f;
+}
+
+#cp .c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    background-image: url(../image/icon2.png);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+#cp,
+#cp a {
+    color: #666;
+}
+
+@media screen and (max-width: 640px) {
+    #wrapper {
+        min-width: 320px;
+        width: 100%;
+        min-height: 660px;
+    }
+    #content {
+        text-align: center;
+        width: 100%;
+        top: 38.2%;
+    }
+    /*图片与输入窗体的设置*/
+    #content_wrapper {
+        position: relative;
+        margin: 0 auto;
+        top: -191px;
+        /*使用反向向上*/
+    }
+    /*百度logo*/
+    #logo {
+        width: 175px;
+        margin: 0 auto;
+    }
+    #logo .show {
+        display: none;
+    }
+    #logo .hidden {
+        display: block;
+    }
+    /*设置logo尺寸*/
+    #logo img {
+        width: 175px;
+        height: 55px;
+    }
+    /*form的尺寸*/
+    #form {
+        margin: 22px 5% 0 5%;
+        width: 90%;
+        height: 42px;
+        text-align: left;
+        border: 0;
+    }
+    /*输入框外侧的文本框*/
+    #txtspn {
+        height: 42px;
+        border: 1px solid #b6b6b6;
+        background: #fff;
+        display: inline-block;
+        vertical-align: top;
+        width: 72%;
+        margin-right: 0;
+        border-color: #b8b8b8 #b8b8b8 #ccc #b8b8b8;
+        /*右边的边框不显示*/
+        position: relative;
+        margin-right: 0;
+        float: left;
+    }
+    /*输入框*/
+    #txt {
+        position: relative;
+        width: 95%;
+        height: 37px;
+        font: 16px/18px arial;
+        margin: 6px 0 0 7px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        outline: 0;
+    }
+    /*鼠标划过事件 改变边框颜色*/
+    #txtspn:hover {
+        border-color: #888;
+    }
+    /*提交按钮的父span框*/
+    #smspn {
+        width: 26%;
+        height: auto;
+        border-bottom: 1px solid transparent;
+        display: inline-block;
+        background-position: -120px, -48px;
+        vertical-align: top;
+        float: left;
+    }
+    /*提交按钮*/
+    #sbmt {
+        width: 100%;
+        height: 44px;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        background: #eee;
+        border: 0;
+        border: 1px solid #e7e7e7;
+    }
+    #ul {
+        display: block;
+        position: relative;
+        top: 121px;
+        width: 90%;
+        margin: 0 5%;
+        padding: 0;
+    }
+    #ul .navcontainer {
+        margin: 0 auto;
+        height: 80px;
+        border: 1px solid #888;
+        width: 100%;
+    }
+    #ul .navcontainer a {
+        margin-top: 10px;
+        width: 15%;
+    }
+    #ul .navcontainer .hidden {
+        display: none;
+    }
+    #ul .navcontainer a.show {
+        display: none;
+    }
+    #ul .navcontainer a.hidden {
+        display: inline-block;
+    }
+    #ul .procontainer {
+        margin-top: 30px;
+    }
+    #ul .mpHover .mpNav {
+        display: none;
+    }
+    #ul .bdmainlink .mpDiv {
+        display: none;
+    }
+    #ul .mpHover .morPro {
+        display: block;
+        position: static;
+        border: none;
+        min-height: 10px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+        border: 1px solid #888;
+    }
+    #ul .mpHover .morPro a {
+        display: inline-block;
+        background-color: transparent;
+    }
+    #ul .mpHover .morPro span {
+        background-color: transparent;
+    }
+    #ul .procontainer .hidden {
+        display: none;
+    }
+    #wrapper .bdmainlink a {
+        width: 24%;
+        border: 0;
+    }
+    #wrapper .bdmainlink a.hidden {
+        display: inline-block;
+    }
+    #footer {
+        height: 30px;
+        bottom: 10px;
+    }
+    #footer .hidden {
+        display: none;
+    }
+    #footer a {
+        text-decoration: none;
+    }
+}

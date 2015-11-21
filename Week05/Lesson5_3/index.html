@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选取重复最多的字符</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 加载自动聚焦的文本框 -->
+        <input type="text" autofocus id="array" onkeydown="EnterPress(event)">
+        <!-- 显示结果 -->
+        <p><strong>出现最多的元素是：</strong><span id="num"></span></p>
+        <p><strong>出现的位置依次是：</strong><span id="result"></span></p>
+        <!-- 两个按钮 -->
+        <input type="button" class="btn" value="确定" onclick="getResult()" >
+        <input type="button" value="重置" onclick="initial()">
+    </div>
+    <!-- 末尾加载js 运行更快 -->
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>

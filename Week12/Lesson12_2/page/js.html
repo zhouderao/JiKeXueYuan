@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>前端面试题目总结</title>
+    <link rel="stylesheet" type="text/css" href="../style/index.css">
+</head>
+
+<body>
+    <header>前端面试必备知识</header>
+    <nav class="content">
+        <h2>JavaScript</h2>
+        <h3>JavaScript原型，原型链?有什么特点？</h3>
+        <a href="http://www.cnblogs.com/FlyingCat/archive/2009/09/21/1570656.html">博客地址</a>
+        <h3>null，undefined 的区别？</h3><a href="http://www.cnblogs.com/eastday/archive/2010/03/03/1677324.html">博客地址</a>
+        <h3>Node.js的适用场景？</h3>
+        <p>高并发、聊天、实时消息推送</p>
+        <h3>介绍js的基本数据类型</h3>
+        <p>number,string,boolean,object,undefined</p>
+        <h3>Javascript如何实现继承？</h3>
+        <p>通过原型和构造器</p>
+        <h3>[“1″, “2”, “3”].map(parseInt) 答案是多少？</h3>
+        <p>[1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix)，其中 radix 表示解析时用的基数。map 传了 3 个 (element, index, array)，对应的 radix 不合法导致解析失败。</p>
+        <p>谈谈This对象的理解</p>
+        <p>this是js的一个关键字，随着函数使用场合不同，this的值会发生变化。但是有一个总原则，那就是this指的是调用函数的那个对象。this一般情况下：是全局对象Global。作为方法调用，那么this就是指这个对象</p>
+        <h3>事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h3>
+        <ul>
+            <li>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。</li>
+            <li>事件处理机制：IE是事件冒泡、火狐是 事件捕获；</li>
+            <li> ev.stopPropagation();</li>
+        </ul>
+        <h3>什么是闭包（closure），为什么要用它？</h3>
+        <h3>“use strict”;是什么意思?使用它的好处和坏处分别是什么?如何判断一个对象是否属于某个类?</h3>
+
+        <h3>new操作符具体干了什么呢?</h3>
+        <ul>
+            <li>创建一个空对象，并且this变量引用该对象，同时还继承了该函数的原型。</li>
+            <li>属性和方法被加入到this引用的对象中。</li>
+            <li>新创建的对象由this所引用，并且最后隐式的返回 this 。</li>
+        </ul>
+
+        <h3>JSON 的了解？</h3>
+        <ul>
+            <li>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。</li>
+            <li>它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小 {'age':'12', 'name':'back'}</li>
+        </ul>
+        <h3>js延迟加载的方式有哪些？</h3>
+        <p>defer和async、动态创建DOM方式（用得最多）、按需异步载入js</p>
+        <h3>ajax 是什么?</h3>
+        <h3>同步和异步的区别?</h3>
+        <h3>如何解决跨域问题?</h3>
+        <p>jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面</p>
+        <h3>documen.write和 innerHTML的区别</h3>
+        <ul>
+            <li>document.write只能重绘整个页面</li>
+            <li>innerHTML可以重绘页面的一部分</li>
+        </ul>
+        <h3>Jquery与jQuery UI有啥区别？</h3>
+        <ul>
+            <li>*jQuery是一个js库，主要提供的功能是选择器，属性修改和事件绑定等等。</li>
+            <li>*jQuery UI则是在jQuery的基础上，利用jQuery的扩展性，设计的插件。</li>
+            <li>提供了一些常用的界面元素，诸如对话框、拖动行为、改变大小行为等等</li>
+        </ul>
+
+        <h3>JQuery的源码看过吗？能不能简单说一下它的实现原理？</h3>
+        <h3>jquery 中如何将数组转化为json字符串，然后再转化回来？</h3>
+        <p>jQuery中没有提供这个功能，所以你需要先编写两个jQuery的扩展：</p>
+        <img src="../img/jq1.png">
+        <h3>针对 jQuery 的优化方法？</h3>
+        <ul>
+            <li>*基于Class的选择性的性能相对于Id选择器开销很大，因为需遍历所有DOM元素。</li>
+            <li>*频繁操作的DOM，先缓存起来再操作。用Jquery的链式调用更好。</li>
+            <li>比如：var str=$("a").attr("href"); *for (var i = size; i < arr.length; i++) {}</li>
+            <li>for 循环每一次循环都查找了数组 (arr) 的.length 属性，在开始循环的时候设置一个变量来存储这个数字，可以让循环跑得更快：</li>
+            <li>for (var i = size, length = arr.length; i < length; i++) {}</li>
+        </ul>
+
+        <h3>JavaScript中的作用域与变量声明提升？</h3>
+        <h3>如何编写高性能的Javascript？</h3>
+        <h3>那些操作会造成内存泄漏？</h3>
+        <p>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。</p>
+        <p>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。</p>
+        <p>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。</p>
+        <p>闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</p>
+
+        <h3>JQuery一个对象可以同时绑定多个事件，这是如何实现的？</h3>
+        <h3>如何判断当前脚本运行在浏览器还是node环境中？（阿里）</h3>
+        <p>通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中</p>
+
+        <h3>对Node的优点和缺点提出了自己的看法？</h3>
+        <p>（优点）因为Node是基于事件驱动和无阻塞的，所以非常适合处理并发请求， 因此构建在Node上的代理服务器相比其他技术实现（如Ruby）的服务器表现要好得多。 此外，与Node代理服务器交互的客户端代码是由javascript语言编写的， 因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。</p>
+        <p>*（缺点）Node是一个相对新的开源项目，所以不太稳定，它总是一直在变， 而且缺少足够多的第三方库支持。看起来，就像是Ruby/Rails当年的样子。</p>
+        <h3>DOM元素e的e.getAttribute(propName)和e.propName有什么区别和联系</h3>
+        <ul>
+            <li>e.getAttribute()，是标准DOM操作文档元素属性的方法，具有通用性可在任意文档上使用，返回元素在源文件中设置的属性</li>
+            <li>e.propName通常是在HTML文档中访问特定元素的特性，浏览器解析元素后生成对应对象（如a标签生成HTMLAnchorElement），这些对象的特性会根据特定规则结合属性设置得到，对于没有对应特性的属性，只能使用getAttribute进行访问</li>
+            <li>e.getAttribute()返回值是源文件中设置的值，类型是字符串或者null（有的实现返回””）</li>
+            <li>e.propName返回值可能是字符串、布尔值、对象、undefined等</li>
+            <li>大部分attribute与property是一一对应关系，修改其中一个会影响另一个，如id，title等属性</li>
+            <li>一些布尔属性&#60;input hidden/&#62;的检测设置需要hasAttribute和removeAttribute来完成，或者设置对应property</li>
+            <li>像&#60;a href="../index.html"&#62;link像&#60;/a&#62;中href属性，转换成property的时候需要通过转换得到完整URL</li>
+            <li>一些attribute和property不是一一对应如：form控件中像&#60;input value="hello"/&#62;对应的是defaultValue，修改或设置value property修改的是控件当前值，setAttribute修改value属性不会改变value property</li>
+            <h3>offsetWidth/offsetHeight,clientWidth/clientHeight与scrollWidth/scrollHeight的区别</h3>
+            <ul>
+                <li>offsetWidth/offsetHeight返回值包含content + padding + border，效果与e.getBoundingClientRect()相同</li>
+                <li>clientWidth/clientHeight返回值只包含content + padding，如果有滚动条，也不包含滚动条</li>
+                <li>scrollWidth/scrollHeight返回值包含content + padding + 溢出内容的尺寸</li>
+            </ul>
+            <h3>什么闭包,闭包有什么用</h3>
+            <p>闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量。</p>
+            <h4>闭包作用域链通常包括三个部分：</h4>
+            <ol>
+                <li>函数本身作用域。</li>
+                <li>闭包定义时的作用域。</li>
+                <li>全局作用域。</li>
+            </ol>
+            <h4>闭包常见用途：</h4>
+            <ol>
+                <li>创建特权方法用于访问控制</li>
+                <li>事件处理程序及回调</li>
+            </ol>
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>主页</title>
+    <!-- 注意这些的顺序  css顺序相反就无法修改 -->
+    <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/mystyle.css">
+    <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航条 可以参照boostrap官网-->
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <!-- 品牌与切换组合得到更好的移动显示 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                </a>
+            </div>
+            <!-- 收集的导航链接，表格，以及切换等内容 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">本科生 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">研究生</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相关网站 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">学校主页</a></li>
+                            <li><a href="#">学生信息注册</a></li>
+                            <li><a href="#">学费缴纳</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">各大社团活动</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">校园招聘信息</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default">查找</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">返回</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户:周饶<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">设置</a></li>
+                            <li><a href="#">查找</a></li>
+                            <li><a href="#">更改</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 栅格系统 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 左侧的导航栏 -->
+            <div class="col-md-2">
+                <ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-th-large"></i> 首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i> 系统管理
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="systemSetting" class="nav nav-list secondmenu collapse" style="height: 0px;">
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;用户管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>&nbsp;菜单管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>&nbsp;角色管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i>&nbsp;修改密码</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;登录记录</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#configSetting" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-credit-card"></i> 成绩查询
+                            <span class="pull-right glyphicon  glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="configSetting" class="nav nav-list secondmenu collapse in">
+                            <li class="active"><a href="#"><i class="glyphicon glyphicon-globe"></i>&nbsp;单科成绩查询</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i>&nbsp;学期成绩查询</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"></i>&nbsp;专业排名查询</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-text-width"></i>&nbsp;补考重修查询</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-ok-circle"></i>&nbsp;四六级查询</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#disSetting" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-globe"></i> 申请出国
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="disSetting" class="nav nav-list secondmenu collapse">
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>&nbsp;申请出国</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#dicSetting" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-bold"></i> 投诉建议
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="dicSetting" class="nav nav-list secondmenu collapse">
+                            <li><a href="#"><i class="glyphicon glyphicon-text-width"></i>&nbsp;建议</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-fire"></i> 关于系统
+                            <span class="badge pull-right">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 右侧表格系统 -->
+            <div class="col-md-10">
+                <h2>总成绩一览表</h2>
+                <hr>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>课程名称</th>
+                            <th>学时/学分</th>
+                            <th>上课学期</th>
+                            <th>授课老师</th>
+                            <th>成绩类型</th>
+                            <th>成绩</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>中国特色社会主义理论与实践研究(主校区)</td>
+                            <td>40/2.5</td>
+                            <td>2013年秋季</td>
+                            <td>张德鹏</td>
+                            <td>正常</td>
+                            <td>90</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 底部的翻页 -->
+                <footer id="footer">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

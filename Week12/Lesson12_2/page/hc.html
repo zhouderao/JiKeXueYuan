@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>前端面试题目总结</title>
+    <link rel="stylesheet" type="text/css" href="../style/index.css">
+</head>
+
+<body>
+    <header>前端面试题目总结之HTML&CSS总结</header>
+    <nav class="content">
+        <h2>HTML</h2>
+        <h3>Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h3>
+        <ul>
+            <li>&#60;!DOCTYPE&#62;声明位于文档中的最前面，处于&#60;html&#62;标签之前。告知浏览器的解析器， 用什么文档类型 规范来解析这个文档。</li>
+            <li>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</li>
+            <li>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</li>
+            <li>DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</li>
+        </ul>
+        <h3>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h3>
+        <ul>
+            <li>CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值， 比如div默认display属性值为“block”，成为“块级”元素； span默认display属性值为“inline”，是“行内”元素。</li>
+            <li>行内元素有：a b span img input select strong（强调的语气） 块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</li>
+            <li>知名的空元素：&#60;br&#62;&#60;hr&#62;&#60;img&#62;&#60;input&#62;&#60;link&#62; &#60;meta&#62; &#60;li&#62;
+                <li>鲜为人知的是：&#60;area&#62;&#60;base&#62;&#60;col&#62;&#60;command&#62;&#60;embed&#62; &#60;keygen&#62; &#60;param&#62; &#60;source&#62; &#60;track&#62; &#60;wbr&#62;</li>
+        </ul>
+        <h3>link 和@import 的区别是？</h3>
+        <ul>
+            <li>link属于XHTML标签，而@import是CSS提供的;</li>
+            <li>页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</li>
+            <li>import只在IE5以上才能识别，而link是XHTML标签，无兼容问题;</li>
+            <li>link方式的样式的权重 高于@import的权重。</li>
+        </ul>
+        <h3>浏览器的内核分别是什么?</h3>
+        <p>*IE浏览器的内核Trident、Mozilla的Gecko、Chrome的Blink（WebKit的分支）、Opera内核原为Presto，现为Blink；</p>
+        <h3>常见兼容性问题？</h3>
+        <ul>
+            <li>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.</li>
+            <li>浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。</li>
+            <li>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。</li>
+            <li>IE下,可以使用获取常规属性的方法来获取自定义属性, 也可以使用getAttribute()获取自定义属性; Firefox下,只能使用getAttribute()获取自定义属性. 解决方法:统一通过getAttribute()获取自定义属性.
+            </li>
+            <li>IE下,even对象有x,y属性,但是没有pageX,pageY属性;Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.</li>
+            <li> Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,</li>
+        </ul>
+        <h3>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML和HTML5？</h3>
+        <p>* HTML5 现在已经不是 SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加。</p>
+        <p>*绘画canvas</p>
+        <p>用于媒介回放的 video 和 audio 元素 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失； sessionStorage 的数据在浏览器关闭后自动删除 语意化更好的内容元素，比如 article、footer、header、nav、section 表单控件，calendar、date、time、email、url、search 新的技术webworker, websockt, Geolocation </p>
+        <p>*移除的元素</p>
+        <p>纯表现的元素：basefont，big，center，font, s，strike，tt，u； 对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+        <p>支持HTML5新标签：</p>
+        <p>*IE8/IE7/IE6支持通过document.createElement方法产生的标签，</p>
+        <p>可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式：</p>
+        <p>*当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架</p>
+        <h3>HTML5的离线储存？</h3>
+        <ul>
+            <li>localStorage 长期存储数据，浏览器关闭后数据不丢失；</li>
+            <li>sessionStorage 数据在浏览器关闭后自动删除。</li>
+        </ul>
+        <h3>语义化的理解</h3>
+        <ul>
+            <li>用正确的标签做正确的事情！</li>
+            <li>html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；</li>
+            <li>在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。</li>
+            <li>搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。</li>
+            <li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</li>
+        </ul>
+        <h3>iframe有那些缺点？</h3>
+        <ul>
+            <li>*iframe会阻塞主页面的Onload事件；</li>
+            <li>*iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript 动态给iframe添加src属性值，这样可以可以绕开以上两个问题。</li>
+        </ul>
+        <h3>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h3>
+        <ul>
+            <li>cookie在浏览器和服务器间来回传递。</li>
+            <li>sessionStorage和localStorage不会 sessionStorage和localStorage的存储空间更大；</li>
+            <li>sessionStorage和localStorage有更多丰富易用的接口；</li>
+            <li>sessionStorage和localStorage各自独立的存储空间；</li>
+        </ul>
+        <h3>如何实现浏览器内多个标签页之间的通信?</h3>
+        <p>调用localstorge、cookies等本地存储方式</p>
+        <h3>webSocket如何兼容低浏览器？</h3>
+        <p>Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR</p>
+        <h3>&#60;img&#62;的title和alt有什么区别</h3>
+        <ol>
+            <li>title是global attributes之一，用于为元素提供附加的advisory information。通常当鼠标滑动到元素上的时候显示。</li>
+            <li>alt是img的特有属性，是图片内容的等价描述，用于图片无法加载时显示、读屏器阅读图片。可提图片高可访问性，除了纯装饰图片外都必须设置有意义的值，搜索引擎会重点分析。</li>
+        </ol>
+        <h3>HTML全局属性(global attribute)有哪些</h3>
+        <ul>
+            <li>accesskey:设置快捷键，提供快速访问元素如aaa在windows下的firefox中按alt + shift + a可激活元素</li>
+            <li>class:为元素设置类标识，多个类名用空格分开，CSS和javascript可通过class属性获取元素</li>
+            <li>contenteditable: 指定元素内容是否可编辑</li>
+            <li>contextmenu: 自定义鼠标右键弹出菜单内容</li>
+            <li>data-*: 为元素增加自定义属性</li>
+            <li>dir: 设置元素文本方向</li>
+            <li>draggable: 设置元素是否可拖拽</li>
+            <li>dropzone: 设置元素拖放类型： copy, move, link</li>
+            <li>hidden: 表示一个元素是否与文档。样式上会导致元素不显示，但是不能用这个属性实现样式效果</li>
+            <li>id: 元素id，文档内唯一</li>
+            <li>lang: 元素内容的的语言</li>
+            <li>spellcheck: 是否启动拼写和语法检查</li>
+            <li>style: 行内css样式</li>
+            <li>tabindex: 设置元素可以获得焦点，通过tab可以导航</li>
+            <li>title: 元素相关的建议信息</li>
+            <li>translate: 元素和子孙节点内容是否需要本地化</li>
+        </ul>
+        <h3>什么是web语义化,有什么好处</h3>
+        <p>web语义化是指通过HTML标记表示页面包含的信息，包含了HTML标签的语义化和css命名的语义化。</p>
+        <p>HTML标签的语义化是指：通过使用包含语义的标签（如h1-h6）恰当地表示文档结构</p>
+        <p>css命名的语义化是指：为html标签添加有意义的class，id补充未表达的语义，如Microformat通过添加符合规则的class描述信息</p>
+        <p>为什么需要语义化：</p>
+        <ul>
+            <li>去掉样式后页面呈现清晰的结构</li>
+            <li>盲人使用读屏器更好地阅读</li>
+            <li>搜索引擎更好地理解页面，有利于收录</li>
+            <li>便团队项目的可持续运作及维护</li>
+        </ul>
+        <h2>CSS</h2>
+        <h3>介绍一下CSS的盒子模型？</h3>
+        <ul>
+            <li>有两种，IE盒子模型、标准W3C盒子模型；IE的content部分包含了border和pading;</li>
+            <li>盒模型：内容(content)、填充(padding)、边界(margin)、边框(border).</li>
+        </ul>
+        <h3>CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h3>
+        <ol>
+            <li>id选择器（#myid）</li>
+            <li>类选择器（.myclassname）</li>
+            <li>标签选择器（div, h1, p）</li>
+            <li>相邻选择器（h1 + p）</li>
+            <li>子选择器（ul &#60; li）</li>
+            <li>.后代选择器（li a）</li>
+            <li>通配符选择器（*）</li>
+            <li>属性选择器（a[rel=“external”]）</li>
+            <li>伪类选择器（a:hover, li: nth – child）</li>
+            <p>*可继承的样式：font-size font-family color, UL LI DL DD DT;</p>
+            <p>*不可继承的样式：border padding margin width height;</p>
+            <p>*优先级就近原则，同权重情况下样式定义最近者为准;</p>
+            <p>*载入样式以最后载入的定位为准;</p>
+            <p>优先级为:</p>
+            <p>!important&#62;id&#62;class&#62;tag</p>
+            <p>important比内联优先级高</p>
+        </ol>
+        <h3>CSS3新增伪类举例</h3>
+        <ul>
+            <li>p:first-of-type 选择属于其父元素的首个p元素的每个p元素。</li>
+            <li>p:last-of-type 选择属于其父元素的首个p元素的每个p元素。</li>
+            <li>p:only-of-type 选择属于其父元素的首个p元素的每个p元素。</li>
+            <li>p:only-child 选择属于其父元素的首个p元素的每个p元素。</li>
+            <li>p:only-child(2) 选择属于其父元素的首个p元素的每个p元素。</li>
+            <li>:enabled :disabled 控制表单控件的禁用状态。</li>
+            <li>:checked 单选框或复选框被选中。</li>
+        </ul>
+        <h3>列出display的值，说明他们的作用。</h3>
+        <ul>
+            <li>block 象块类型元素一样显示。</li>
+            <li>none 缺省值。象行内元素类型一样显示。</li>
+            <li>inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。</li>
+            <li>list-item 象块类型元素一样显示，并添加样式列表标记。</li>
+        </ul>
+        <h3>position的值， relative和absolute定位原点是？</h3>
+        <ul>
+            <li>*absolute：生成绝对定位的元素，相对于 static定位以外的第一个父元素进行定位。</li>
+            <li>*fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+            <li>*relative：生成相对定位的元素，相对于其正常位置进行定位。</li>
+            <li>*static默认值。没有定位，元素出现在正常的流中</li>
+            <li>*（忽略 top, bottom, left, right z-index 声明）。</li>
+            <li>* inherit 规定从父元素继承 position 属性的值。</li>
+        </ul>
+        <h3>CSS3有哪些新特性？</h3>
+        <ul>
+            <li>CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），</li>
+            <li>对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）</li>
+            <li>transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜</li>
+            <li>增加了更多的CSS选择器 多背景 rgba</li>
+        </ul>
+        <h3>为什么要初始化CSS样式?</h3>
+        <p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。</p>
+        <h3>使用 CSS 预处理器吗？喜欢那个？</h3>
+        <p>SASS</p>
+        <h3>如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</h3>
+        <p>多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms</p>
+        <h3>display:inline-block 什么时候会显示间隙？(携程)</h3>
+        <p>移除空格、使用margin负值、使用font-size:0、letter-spacing、word-spacing</p>
+        <h2>CSS有哪些继承属性</h2>
+        <ul>
+            <li>关于文字排版的属性如：
+                <ul>
+                    <li>font</li>
+                    <li>word-break</li>
+                    <li>letter-spacing</li>
+                    <li>text-align</li>
+                    <li>text-rendering</li>
+                    <li>word-spacing</li>
+                    <li>white-space</li>
+                    <li>text-indent</li>
+                    <li>text-transform</li>
+                    <li>text-shadow</li>
+                </ul>
+            </li>
+            <li>line-height</li>
+            <li>color</li>
+            <li>visibility</li>
+            <li>cursor</li>
+        </ul>
+        <h3>容器包含若干浮动元素时如何清理(包含)浮动</h3>
+        <ol>
+            <li>容器元素闭合标签前添加额外元素并设置clear: both</li>
+            <li>父元素触发块级格式化上下文(见块级可视化上下文部分)</li>
+            <li>设置容器元素伪元素进行清理推荐的清理浮动方法</li>
+            <img src="../img/cleanfloat.png">
+        </ol>
+        <h3>什么是FOUC?如何避免</h3>
+        <p>Flash Of Unstyled Content：用户定义样式表加载之前浏览器使用默认样式显示文档，用户样式加载渲染之后再从新显示文档，造成页面闪烁。解决方法：把样式表放到文档的head</p>
+        <h3>如何创建块级格式化上下文(block formatting context),BFC有什么用</h3>
+        <h4>创建规则：</h4>
+        <ol>
+            <li>根元素</li>
+            <li>浮动元素（float不是none）</li>
+            <li>绝对定位元素（position取值为absolute或fixed）</li>
+            <li>display取值为inline-block,table-cell, table-caption,flex, inline-flex之一的元素</li>
+            <li>overflow不是visible的元素</li>
+        </ol>
+        <h4>作用：</h4>
+        <ol>
+            <li>可以包含浮动元素</li>
+            <li>不被浮动元素覆盖</li>
+            <li>阻止父子元素的margin折叠</li>
+        </ol>
+        <ol>毗邻的两个或多个margin会合并成一个margin，叫做外边距折叠。规则如下：
+            <li>两个或多个毗邻的普通流中的块元素垂直方向上的margin会折叠</li>
+            <li>浮动元素/inline-block元素/绝对定位元素的margin不会和垂直方向上的其他元素的margin折叠</li>
+            <li>创建了块级格式化上下文的元素，不会和它的子元素发生margin折叠</li>
+            <li>元素自身的margin-bottom和margin-top相邻时也会折叠</li>
+        </ol>
+        <h3>如何确定一个元素的包含块(containing block)</h3>
+        <ol>
+            <li>根元素的包含块叫做初始包含块，在连续媒体中他的尺寸与viewport相同并且anchored at the canvas origin;对于paged media，它的尺寸等于pagearea。初始包含块的direction属性与根元素相同。</li>
+            <li>position为relative或者static的元素，它的包含块由最近的块级（display为block,list-item, table）祖先元素的内容框组成</li>
+            <li>如果元素position为fixed。对于连续媒体，它的包含块为viewport；对于paged media，包含块为page area</li>
+            <li>如果元素position为absolute，它的包含块由祖先元素中最近一个position为relative,absolute或者fixed的元素产生，规则如下：
+                <ul>
+                    <li>如果祖先元素为行内元素，the containing block is the bounding box around the padding boxes of the first and the last inline boxes generated for that element.</li>
+                    <li>其他情况下包含块由祖先节点的padding edge组成</li>
+                </ul>
+            </li>
+            <li>如果找不到定位的祖先元素，包含块为初始包含块</li>
+        </ol>
+        <h3>stacking context,布局规则</h3>
+        <h4>z轴上的默认层叠顺序如下（从下到上）：</h4>
+        <ol>
+            <li>根元素的边界和背景</li>
+            <li>常规流中的元素按照html中顺序</li>
+            <li>浮动块</li>
+            <li>ositioned元素按照html中出现顺序</li>
+        </ol>
+        <h4>如何创建stacking context：</h4>
+        <ol>
+            <li>根元素</li>
+            <li>z-index不为auto的定位元素</li>
+            <li>a flex item with a z-index value other than ‘auto’</li>
+            <li>opacity小于1的元素</li>
+            <li>在移动端webkit和chrome22+，z-index为auto，position: fixed也将创建新的stacking context</li>
+        </ol>
+    </nav>
+</body>
+
+</html>

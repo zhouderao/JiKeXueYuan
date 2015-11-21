@@ -1,0 +1,679 @@
+body,
+div,
+nav,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+i,
+a,
+span,
+th,
+td {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+}
+
+nav {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    height: 61px;
+    width: 100%;
+    position: relative;
+    z-index: 120;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+ol,
+ul,
+dl {
+    list-style: none;
+}
+
+
+/*橘色的链接*/
+
+.orange {
+    color: #f50;
+}
+
+
+/*绿色的标签*/
+
+.green {
+    color: #118850;
+}
+
+
+/*最底部隐藏部分的样式*/
+
+#top {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #d1d1d1;
+}
+
+
+/*选择的框体*/
+
+.selectcolor {
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 0;
+    height: 100px;
+    width: 100px;
+}
+
+
+/*各个不同颜色的背景*/
+
+#red {
+    background-color: #f00;
+}
+
+#blue {
+    background-color: #00f;
+}
+
+#green {
+    background-color: #0f0;
+}
+
+#aqua {
+    background-color: #0ff;
+}
+
+#orange {
+    background-color: orange;
+}
+
+
+/*加载显示最上层以及共性样式*/
+
+.width-fix {
+    margin: 0 auto;
+    width: 1190px;
+}
+
+
+/*主题logo*/
+
+.logo {
+    float: left;
+    width: 192px;
+    height: 60px;
+}
+
+
+/*今天的天气信息样式*/
+
+.todayinfo {
+    float: left;
+    height: 60px;
+}
+
+.sethome {
+    width: 60px;
+    height: 25px;
+    margin-top: 20px;
+    float: left;
+    line-height: 1.6;
+    background: transparent url("../images/icons.png") no-repeat scroll -20px -172px;
+}
+
+.sethome a {
+    color: #fff;
+}
+
+
+/*城市的天气样式*/
+
+.city_weather {
+    float: left;
+    height: 60px;
+    margin-left: 20px;
+    line-height: 60px;
+}
+
+.city {
+    padding-left: 9px;
+    padding-right: 10px;
+}
+
+.city span {
+    color: #999;
+    display: inline-block;
+}
+
+.arrow {
+    width: 9px;
+    height: 6px;
+    margin-left: -2px;
+    vertical-align: center;
+    background: transparent url("../images/icons.png") no-repeat scroll -52px -97px;
+}
+
+.weather span {
+    color: #999;
+    display: inline-block;
+}
+
+.weather {
+    padding-right: 10px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.weaIcon {
+    background-image: url("../images/a1.png");
+    line-height: 60px;
+    vertical-align: middle;
+    width: 26px;
+    height: 60px;
+    background-position: 0px 13px;
+    background-repeat: no-repeat;
+}
+
+.nowWea {
+    margin-left: 2px;
+}
+
+.temprature {
+    font-family: "arial";
+    margin-left: 4px;
+}
+
+
+/*日历的样式*/
+
+.canlendar {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.canlendar span {
+    color: #999;
+}
+
+
+/*导航条右侧的样式*/
+
+.advertise {
+    width: 220px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f00;
+    line-height: 60px;
+    float: right;
+    background-color: #eee;
+}
+
+.setting {
+    line-height: 60px;
+    float: right;
+    height: 60px;
+}
+
+.setting span,
+.setting a {
+    color: #999;
+}
+
+.email {
+    width: 68px;
+    height: 60px;
+    display: inline-block;
+}
+
+.link {
+    display: block;
+    width: 36px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0 0 31px;
+    text-align: left;
+    background-image: url('../images/icons.png');
+    background-repeat: no-repeat;
+    background-position: -96px -108px;
+}
+
+.browser {
+    background-position: -162px -109px;
+}
+
+.skin {
+    background-position: -244px -108px;
+}
+
+
+/*搜索框的样式*/
+
+.search {
+    height: 83px;
+}
+
+.search-con {
+    margin: 0 auto;
+    width: 800px;
+    height: 40px;
+    position: relative;
+    top: 43px;
+}
+
+.baidu_logo {
+    position: relative;
+    top: 5px;
+    width: 104px;
+    height: 34px;
+    float: left;
+    margin: 0px 20px 0px 0px;
+}
+
+.search-con form {
+    height: 40px;
+    float: left;
+    width: 676px;
+}
+
+.input-txt {
+    padding-left: 5px;
+    width: 534px;
+    height: 38px;
+    border: 1px solid #888;
+    font-size: 20px;
+    border-right: 0px;
+    float: left;
+}
+
+.input-btn {
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #666;
+    float: left;
+    font-weight: bold;
+}
+
+
+/*热门搜索*/
+
+.hotsearch-con {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 1190px;
+    height: 20px;
+}
+
+.hotNew {
+    margin: 0 auto;
+    width: 550px;
+    height: 20px;
+}
+
+.hotNew ul,
+.hotNew ul li {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.boxhot {
+    width: 508px;
+}
+
+.hotNew ul li {
+    margin-right: 20px;
+}
+
+.hotNew ul li.first {
+    margin-right: 6px;
+}
+
+.more {
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    float: right;
+}
+
+
+/*产品展示的区域*/
+
+.pro_nav {
+    width: 1190px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.pro_nav li {
+    list-style: none;
+    float: left;
+    text-decoration: none;
+    width: 110px;
+    height: 38px;
+    border-top: 2px solid #099e6a;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fcfcfc;
+}
+
+.pro_nav li.first {
+    width: 90px;
+    background-color: #099e6a;
+}
+
+.pro_nav li a {
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    width: 109px;
+    height: 20px;
+    border-left: 1px solid #eaeaea;
+    margin-top: 9px;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+}
+
+.pro_nav li.first a {
+    width: 90px;
+    border-left: 0;
+    color: #fff;
+}
+
+
+/*内部展示栏左侧布局样式*/
+
+.left {
+    width: 280px;
+    height: 500px;
+    float: left;
+}
+
+.hotpot {
+    text-align: center;
+    height: 140px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.hotpot a {
+    text-align: left;
+    display: block;
+    margin-left: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+/*左侧产品栏*/
+
+.sort {
+    height: 195px;
+    border: 1px solid #cecece;
+    padding: 9px 0 10px 12px;
+}
+
+.sort ul li {
+    list-style: none;
+}
+
+.startbar-list {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.baritem {
+    width: 128px;
+}
+
+.category {
+    padding-left: 25px;
+    float: left;
+    position: relative;
+    padding-top: 6px;
+    font-size: 14px;
+}
+
+.baritem i {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+
+/*雪碧图*/
+
+.star-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../images/smallicons.png') no-repeat;
+}
+
+.baritem .i-tv {
+    background-position: -20px -81px;
+}
+
+.baritem .i-game {
+    background-position: -19px -301px;
+}
+
+.baritem .i-movie {
+    background-position: -20px -160px;
+}
+
+.baritem .i-comic {
+    background-position: -20px -381px;
+}
+
+.baritem .i-toutiao {
+    background-position: -20px -100px;
+}
+
+.baritem .i-travel {
+    background-position: -20px -261px;
+}
+
+.baritem .i-caipiao {
+    background-position: -20px -21px;
+}
+
+.baritem .i-gaoxiao {
+    background-position: -20px -121px;
+}
+
+.baritem .i-tuan {
+    background-position: -20px -281px;
+}
+
+.baritem .i-life {
+    background-position: -20px -221px;
+}
+
+.baritem .i-music {
+    background-position: -20px -362px;
+}
+
+.baritem .i-food {
+    background-position: -19px -42px;
+}
+
+
+/*内部展示栏右侧布局样式*/
+
+.right {
+    width: 900px;
+    height: 268px;
+    float: right;
+    border: 1px solid #0aa770;
+}
+
+.site-bd {
+    width: 868px;
+    padding-left: 23px;
+    padding-top: 11px;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.site-nobd {
+    border: 0;
+}
+
+.site-manage {
+    float: right;
+    width: 33px;
+    height: 33px;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: -316px -128px;
+    cursor: pointer;
+    z-index: 999;
+    background-image: url('../images/icons.png');
+}
+
+.site-item {
+    width: 130px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-right: 4px;
+    position: relative;
+    color: #000;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.comicon {
+    padding-left: 25px;
+    background: url(../images/siteicons.png) no-repeat;
+}
+
+
+/*雪碧图*/
+
+.xinlang {
+    background-position: 2px -282px;
+}
+
+.baidu {
+    background-position: 2px -202px;
+}
+
+.souhu {
+    background-position: 2px -322px;
+}
+
+.tengxu {
+    background-position: 2px -42px;
+}
+
+.wangyi {
+    background-position: 2px -161px;
+}
+
+.aiqiyi {
+    background: url(../images/1821.png) no-repeat 0 -2px;
+}
+
+.tianmao {
+    background: url(../images/10138.2.png) no-repeat 0 -2px;
+}
+
+.fenghuang {
+    background-position: 2px -240px;
+}
+
+.taobao {
+    background-position: 2px -360px;
+}
+
+.mianfei {
+    background: url(../images/game0331.png) no-repeat 0 -2px;
+}
+
+.youxi {
+    background-position: 2px -2px;
+}
+
+.xinhua {
+    background: url(../images/10435.png) no-repeat 0 -2px;
+}
+
+.jingdong {
+    background: url(../images/21.1.png) no-repeat 0 -2px;
+}
+
+.juhuasuan {
+    background: url(../images/8.411.png) no-repeat 0 -2px;
+}
+
+.jinri {
+    background: url(../images/6282.png) no-repeat 0 -2px;
+}
+
+.yingshi {
+    background: url(../images/1419388771.png) no-repeat 0 -2px;
+}
+
+.qiche {
+    background-position: 2px -522px;
+}
+
+.qunaer {
+    background: url(../images/2554.png) no-repeat 0 -2px;
+}
+
+.second {
+    padding-left: 0;
+}
+
+
+/*底部的样式*/
+
+.bottom {
+    position: fixed; /* 固定在浏览器的某个一定的部位*/ 
+    width: 100%;
+    bottom: 0;
+    height: 28px;
+    line-height: 28px;
+    color: #888;
+    background-color: #3b321d;
+    text-align: center;
+    font-size: 12px;
+}

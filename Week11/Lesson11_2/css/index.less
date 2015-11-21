@@ -1,0 +1,199 @@
+// 本任务采用koala软件 修改后自动更新至index.css文件
+body,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+// 常用的变量 //的注释不会在css中出现
+@fontSize: 20px;
+@black: #000;
+@red: #f00;
+@gre: #0c0;
+// div的位置居中
+.divmid() {
+    margin: 0 auto;
+}
+
+//所在位置的样式  ()在css文件中不出现
+.selected() {
+    color: @red;
+    font-weight: bold;
+}
+
+// margin 上下左右的四个参数
+.mt(@top: 10px) {
+    margin-top: @top;
+}
+
+.mr(@right: 20px) {
+    margin-right: @right;
+}
+
+.mb(@bottom: 20px) {
+    margin-bottom: 20px;
+}
+
+.ml(@left: 20px) {
+    margin-left: @left;
+}
+
+//paddin的四个带参数
+.pt(@top: 20px) {
+    padding-top: @top;
+}
+
+.pr(@right: 20px) {
+    padding-right: @right;
+}
+
+.pb(@bottom: 20px) {
+    padding-bottom: @bottom;
+}
+
+.pl(@left: 20px) {
+    padding-left: @left;
+}
+
+//文字的左右之类的
+.textCenter() {
+    text-align: center;
+}
+
+.textLeft() {
+    text-align: left;
+}
+
+.textRight() {
+    text-align: right;
+}
+
+// 实心线边框宽度和颜色设置
+.border(@width: 1px, @color: black) {
+    border: @width solid @color;
+}
+
+// 圆角半径
+.border-r(@radius: 5px) {
+    border-radius: @radius;
+}
+
+// 右侧朝向的三角形
+.triangle-right(@width: 10px, @color: green) {
+    width: 0;
+    height: 0;
+    border-width: @width;
+    border-style: solid;
+    border-color: transparent transparent transparent @color;
+}
+
+.container {
+    .divmid();
+    .mt(50px);
+    .border(2px, #333);
+    .pt();
+    .border-r(10px);
+    .pt(20px);
+    width: 1000px;
+    background-color: #d1d1d1;
+}
+
+// 头部信息
+.head {
+    .ml(30px);
+    .mr(20px);
+    position: relative;
+    color: @red;
+    // & 代表上一层目录的信息  这里是'.head'
+    &_item {
+        display: inline-block;
+        .textCenter();
+    }
+    &_classfy {
+        top: 0;
+        .textLeft();
+        width: 100px;
+        font-size: @fontSize + 4;
+    }
+    &_price {
+        width: 200px;
+        &_item {
+            height: 30px;
+            font-size: @fontSize + 4;
+            text-align: left;
+        }
+    }
+    &_route {
+        .ml(20px);
+        width: 300px;
+        font-size: @fontSize * 3;
+        line-height: 30px;
+    }
+    &_time {
+        width: 300px;
+        text-align: right;
+        font-size: @fontSize;
+        &_item {
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+
+.list {
+    .divmid();
+    .ml();
+    height: 180px;
+    font-size: @fontSize;
+    .mt(20px);
+    &_item {
+        display: inline-block;
+        .mr(10px);
+        .ml(10px);
+        width: @fontSize;
+        float: left;
+        font-weight: bold;
+        color: @black;
+    }
+    &_selected {
+        .selected();
+    }
+}
+
+.row {
+    .divmid();
+    width: 500px;
+    height: 40px;
+    position: relative;
+    &_item {
+        display: inline-block;
+    }
+    .info {
+        .mt(5px);
+        width: 480px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        background-color: @gre;
+    }
+    .triangle {
+        left: 480px;
+        top: -10px;
+        position: absolute;
+        .triangle-right(30px, @gre);
+    }
+}
+
+.footer {
+    .divmid();
+    .pl(15px);
+    width: 240px;
+    height: 60px;
+    font-size: @fontSize*2;
+    line-height: 60px;
+    color: @red;
+    font-weight: bold;
+}

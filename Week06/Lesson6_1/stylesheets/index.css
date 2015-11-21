@@ -1,0 +1,142 @@
+body,
+table,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*ie6下居中*/
+
+body {
+    text-align: center;
+}
+
+/*表格的样式*/
+table {
+    text-align: center;
+    margin: 40px auto 0 auto;
+    _margin-top: 40px;                         /*适配ie下的margin-top*/
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(159, 159, 159);
+    background: linear-gradient(bottom, rgb(159, 159, 159) 0%, rgb(200, 200, 200) 100%);
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(159, 159, 159)), color-stop(1, rgb(200, 200, 200)));
+    background: -moz-linear-gradient( top, rgb(200, 200, 200), rgb(159, 159, 159));
+    background: -o-linear-gradient( top, rgb(200, 200, 200), rgb(159, 159, 159));
+    _background-color: rgb(159, 159, 159);     /*给ie6下的背景添加颜色*/
+}
+
+/*输入框的样式表*/
+
+input {
+    width: 442px;
+    display: block;
+    text-align: right;
+    border: 0;
+}
+
+td {
+    padding: 5px;
+}
+
+
+/*小文本框的阴影效果*/
+
+#smtext {
+    border-top-left-radius: 5px;                /* 左上角的圆角 */
+    border-top-right-radius: 5px;               /* 右上角的圆角 */
+    padding-right: 8px;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: #fcfdea;
+    -moz-box-shadow: 2px 2px 2px #999 inset;    /* For Firefox3.6+ */
+    -webkit-box-shadow: 2px 2px 2px #999 inset; /* For Chrome5+, Safari5+ */
+    box-shadow: 2px 2px 2px #999 inset;         /* For Latest Opera */
+}
+
+/*大文本框的阴影效果*/
+
+#lgtext {
+    border-bottom-left-radius: 5px;              /* 左下角的圆角 */
+    border-bottom-right-radius: 5px;             /* 右下角的圆角 */
+    padding-right: 8px;
+    margin: 0 auto;
+    font-size: 40px;
+    background-color: #fcfdea;
+    -moz-box-shadow: 2px -2px 2px #999 inset;    /* For Firefox3.6+ */
+    -webkit-box-shadow: 2px -2px 2px #999 inset; /* For Chrome5+, Safari5+ */
+    box-shadow: 2px -2px 2px #999 inset;         /* For Latest Opera */
+}
+
+/*所有按钮的默认样式  除ie都有对应的渐变色*/
+
+.btn {
+    color: #f1f1f1;
+    *color: #000;                               /*改变ie6~7的文字的颜色*/
+    text-align: center;
+    font-size: 25px;
+    width: 80px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: rgb(44, 160, 202);
+    background: linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44, 160, 202)), color-stop(1, rgb(62, 184, 229)));
+    background: -moz-linear-gradient( top, rgb(62, 184, 229), rgb(44, 160, 202));
+    background: -o-linear-gradient( top, rgb(62, 184, 229), rgb(44, 160, 202));
+    _background-color: rgb(44, 160, 202);        /*给ie6下的背景添加颜色*/
+}
+
+/*棕色按钮渐变色*/
+
+.brown {
+    background-color: rgb(151, 83, 46);
+    background: linear-gradient(bottom, rgb(151, 83, 46) 0%, rgb(189, 84, 55) 100%);
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(151, 83, 46)), color-stop(1, rgb(189, 84, 55)));
+    background: -moz-linear-gradient( top, rgb(189, 84, 55), rgb(151, 83, 46));
+    background: -o-linear-gradient( top, rgb(189, 84, 55), rgb(151, 83, 46));
+    _background-color: rgb(151, 83, 46);        /*给ie6下的背景添加颜色*/
+}
+
+/*灰色按钮渐变色*/
+
+.gray {
+    background-color: rgb(95, 95, 95);
+    background: linear-gradient(bottom, rgb(95, 95, 95) 0%, rgb(134, 134, 134) 100%);
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(95, 95, 95)), color-stop(1, rgb(134, 134, 134)));
+    background: -moz-linear-gradient( top, rgb(134, 134, 134), rgb(95, 95, 95));
+    background: -o-linear-gradient( top, rgb(134, 134, 134), rgb(95, 95, 95));
+    _background-color: rgb(95, 95, 95);        /*给ie6下的背景添加颜色*/
+}
+
+/*黑色按钮渐变色*/
+
+.balck {
+    background-color: rgb(34, 34, 34);
+    background: linear-gradient(bottom, rgb(34, 34, 34) 0%, rgb(95, 95, 95) 100%);
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(34, 34, 34)), color-stop(1, rgb(95, 95, 95)));
+    background: -moz-linear-gradient( top, rgb(95, 95, 95), rgb(34, 34, 34));
+    background: -o-linear-gradient( top, rgb(95, 95, 95), rgb(34, 34, 34));
+    _background-color: rgb(34, 34, 34);        /*给ie6下的背景添加颜色*/
+}
+
+/*更多的样式表*/
+
+.show {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+
+.topMore td {
+    padding-top: 25px;
+}
+
+.lgwidth {
+    width: 170px;
+}
+
+.lgheight {
+    height: 98px;
+}

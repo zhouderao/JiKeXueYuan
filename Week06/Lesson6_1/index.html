@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- ie 页面内容中文兼容-->
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <title>完整功能的计算器</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css"/>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="show" colspan="5">
+            <input type="text" id="smtext" readonly="readonly" value="" />
+            <input type="text" id="lgtext" readonly="readonly" value="0" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="btn brown" type="button" onclick="deleteOne()" value="x"/>
+        </td>
+        <td>
+            <input class="btn brown" type="button" onclick="deleteLine()" value="CE"/>
+        </td>
+        <td>
+            <input class="btn brown" type="button" onclick="initial()" value="C"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="option('(')" value="("/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="option(')')" value=")"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('sin')" value="sin"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('cos')" value="cos"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('tan')" value="tan"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('neg')" value="±"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('fra')" value="1/x"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(7)" value="7"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(8)" value="8"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(9)" value="9"/>
+        </td>
+        <td>
+            <input class="btn balck" type="button" onclick="option('/')" value="/"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="option('%')" value="%"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(4)" value="4"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(5)" value="5"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(6)" value="6"/>
+        </td>
+        <td>
+            <input class="btn balck" type="button" onclick="option('*')" value="*"/>
+        </td>
+        <td>
+            <input class="btn gray" type="button" onclick="operation('sqr')" value="√"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(1)" value="1"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(2)" value="2"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(3)" value="3"/>
+        </td>
+        <td>
+            <input class="btn balck" type="button" onclick="option('-')" value="-"/>
+        </td>
+        <td rowspan="2">
+            <input class="btn lgheight balck"  type="button" onclick="equal()" value="="/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input class="btn lgwidth"  type="button" onclick="dispaly(0)" value="0"/>
+        </td>
+        <td>
+            <input class="btn" type="button" onclick="dispaly(10)" value="."/>
+        </td>
+        <td>
+            <input class="btn balck" type="button" onclick="option('+')" value="+"/>
+        </td>
+    </tr>
+</table>
+    <!-- 末尾加载js 运行更快 -->
+    <!-- ie6兼容需加上编码的格式-->
+    <script charset="UTF-8" type="text/javascript" src="javascript/index.js"></script>
+</body>
+</html>

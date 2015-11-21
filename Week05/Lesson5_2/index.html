@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+
+<body>
+    <table>
+        <!-- 显示结果 -->
+        <thead>
+            <th colspan="4" id="answer">0</th>
+        </thead>
+        <!-- 按钮部分 -->
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="3" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="+" onclick="getOption(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="6" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="-" onclick="getOption(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="9" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="*" onclick="getOption(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="C" onclick="clearPrint()">
+            </td>
+            <td>
+                <input type="button" value="0" onclick="display(this.value)">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="result()">
+            </td>
+            <td>
+                <input type="button" value="/" onclick="getOption(this.value)">
+            </td>
+        </tr>
+        <!-- 底部显示信息 -->
+        <tr>
+            <td colspan="4">计算完一次请清除</td>
+        </tr>
+    </table>
+    <!-- 底部再嵌入script能够提高效率 -->
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>
