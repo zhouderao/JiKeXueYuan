@@ -1,0 +1,64 @@
+/*标签选择器*/
+div {
+    font-size: 20px;
+}
+
+table {
+    text-align: center;
+    border-spacing: 0.5rem;
+    margin: 5px 0;
+    width: 750px;
+    /*加了这个属性就没圆角了 但是表格真正的在一起了*/
+    /*border-collapse: collapse;*/
+    table-layout: fixed;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+th,td{
+	border-radius:25px;
+	border-width: 3px;
+	border-color: aqua;
+    border-style: solid;
+	padding: 10px;
+}
+tfoot th{
+    border-color: black;
+}
+
+/*hover属性与阴影圆角的使用*/
+th:hover{
+    background-color: #FFFF11;
+    box-shadow: -10px -10px 5px #FFFF11;
+}
+
+td:hover {
+    background-color: #FFcccc;
+    box-shadow: 10px 10px 5px #FFcccc;
+}
+
+/*类选择器*/
+.side:hover{
+    background-color: #FFcccc;
+    box-shadow: -10px 10px 5px #FFcccc;
+}
+
+.yali:hover{
+    background-color: #aa0000;
+    box-shadow: 10px 10px 5px #aa0000;
+}
+
+.sleep:hover{
+    background-color: #00ee00;
+    box-shadow: 10px 10px 5px #00ee00;
+}
+/*CSS3选择器  对应阿里的笔试题
+  谢谢黄亚雄老师 
+*/
+tr:nth-child(2n):hover{
+    background-color: #0f0;
+}
+
+tr:nth-child(2n+1):hover{
+    background-color: #f0f;
+}

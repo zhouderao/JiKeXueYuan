@@ -1,0 +1,279 @@
+/*标签选择器*/
+body{
+	font: 12px arial;
+	margin: 0;
+	padding: 0;
+}
+body,
+form {
+    position: relative;
+}
+body,
+p,
+form,{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+input {
+    border: 0;
+    padding: 0;
+}
+
+/*全局的div盒子*/
+#wrapper {
+    min-width: 810px;
+    height: 100%;
+    min-height: 600px;
+    text-align: center;
+}
+
+/*网页的顶端部分样式*/
+#header {
+    padding-bottom: 100px;
+    text-align: center;
+}
+#u {
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 96px 0 0;
+}
+#u a.mnav{
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+#u a.lb{
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    margin-left: 20px;
+}
+#u a.pf{
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+#u a.bri{
+    display: block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    overflow: hidden;
+}
+#u a:hover{
+	color: blue;
+}
+
+/*更多产品栏的样式*/
+#morepro{
+	width: 85px;
+	min-height: 100px;
+	right: 0px;
+	top: 0px;
+	border-left: 1px solid #E7E7E7;
+	background-color: #F9F9F9;
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+}
+#morepro .bdmp{
+	width: 66px;
+	height: 43px;
+	line-height: 43px;
+	padding-top: 9px;
+	margin: 0px auto;
+	font-size: 13px;
+	color: #333;
+	border-bottom: 1px solid #F0F0F0;
+	cursor: default;
+}
+#morepro .bdmpContainer{
+	position: relative;
+	overflow: hidden;
+}
+#morepro .bdmpContainer a{
+	display: block;
+	width: 66px;
+	height: 76px;
+	margin: 0px auto;
+	border-bottom: 1px solid #F0F0F0;
+	color: #666;
+	text-decoration: none;
+	overflow: hidden;
+}
+#morepro .bdmpContainer span{
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: 10px auto 5px;
+	background: transparent url("image/bdbri_icons_2e35e84b.png") no-repeat scroll 0% 0%;
+	cursor: pointer;
+}
+/*span和类型之间的只有一个点 没有空格*/
+#morepro .bdmpContainer span.bdbriimgitem_1{ 
+	background-position: 0px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_2{
+	background-position: -36px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_3{
+	background-position: -72px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_4{
+	background-position: -112px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_5{
+	background-position: -148px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_6{
+	background-position: -184px 0px;
+}
+#morepro .bdmpContainer span.bdbriimgitem_7{
+	background-position: -220px 0px;
+}
+
+/*设置栏的样式*/
+#setting{
+	right: 70px;
+	top: 40px;
+	width: 70px;
+	margin-top: -1px;
+	background-color: #FFF;
+	border:1px solid #D1D1D1;
+	box-shadow: 1px 1px 5px #D1D1D1;
+	position: absolute;
+	z-index: 302;
+}
+#bdrow{
+	width: 0px;
+	height: 0px;
+	font-size: 0px;
+	line-height: 0;
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -5px;
+}
+#setting a{
+	display: block;
+	width: 50px;
+	text-align: left;
+	margin: 0px !important;
+	padding: 0px 9px;
+	line-height: 26px;
+	text-decoration: none;
+}
+#setting a:link{
+	background: #FFF none repeat scroll 0% 0%;
+	color: #333;
+}
+
+
+/*中间内容部分（含图片）的样式*/
+#content {
+	text-align: center;
+    position: relative;
+    height: 50%;
+}
+#form{
+	margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+}
+#txtspn {
+    height: 35px;
+    border: 1px solid #b6b6b6;
+    position: relative;
+    padding: 0;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    
+}
+#kw {
+    position: relative;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+#smspn {
+    width: auto;
+    height: auto;
+    margin-left: -3px;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    background-position: -120px -48px;
+    z-index: 0;
+    vertical-align: top;
+}
+#su {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    background-position: 0 -48px;
+    cursor: pointer;
+}
+
+/*底部信息的样式*/
+#footer{
+	text-align: center;
+	margin-top: 20%;
+}
+#lh {
+    margin: 16px 0 5px;
+}
+#lh a,#lh a:visited{
+    margin: 0 10px;
+    color: #00f;
+}
+#cp .c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(image/icons_45de3f02.png) no-repeat;
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+#cp, #cp a {
+    color: #666;
+}
