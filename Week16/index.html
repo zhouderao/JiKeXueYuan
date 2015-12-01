@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocos2d测试你的反应速度</title>
+    <script type="text/javascript" src="src/resource.js"></script>
+    <script type="text/javascript" src="lib/cocos2d-js-v3.8.js"></script>
+</head>
+<body style="margin: 0;padding: 0;">
+    <canvas id="gameCanvas"></canvas>
+    <script type="text/javascript">
+        window.onload = function () {
+            //获取屏幕高度并设置canvas对应的高和宽
+            var canvas = document.getElementById("gameCanvas");
+            var height = window.innerHeight;
+            canvas.height = height;
+            canvas.width = height*2/3;
+
+            //游戏开始
+            cc.game.onStart = function(){
+                    cc.LoaderScene.preload(g_resource,function(){
+                        //开始时候的场景
+                        var StartLayer = cc.Layer.extend({
+                           sprite:null,
+                            ctor: function () {
+                                this._super();
+                                var size = cc.winSize;
+                                //加载背景图片
+                                var start = cc.Sprite.create(res.clickToStart_img);
+                                start.setPosition(size.width / 2, size.height / 2);
+                                start.setScale(height/960);
+                                this.addChild(start);
+
+                                //加载浮动效果
+                                var startAnim = cc.Sprite.create(res.clickToStartAnim_img);
+                                startAnim.setPosition(size.width / 2, size.height / 2);
+                                startAnim.setScale(height/960);
+                                this.addChild(startAnim);
+                                var action = cc.Sequence.create(cc.FadeOut.create(1.0),cc.FadeIn.create(1.0));
+                                startAnim.runAction(action.repeatForever());
+                                return true;
+                            },
+                            onEnter: function () {
+                                this._super();
+
+                                //鼠标事件
+                                var me=this;
+                                this._touchEvent=cc.EventListener.create({
+                                    event:cc.EventListener.TOUCH_ONE_BY_ONE,
+                                    swallowTouches:true,
+                                    onTouchBegan:function(touch,event){
+                                        cc.director.pushScene(new GameScene);
+                                        return false;
+                                    }
+                                });
+
+                                cc.eventManager.addListener(this._touchEvent,this);
+                            }
+                        });
+                        var StartScene = cc.Scene.extend({
+                           onEnter:function(){
+                               this._super();
+                               var layer = new StartLayer();
+                               this.addChild(layer);
+                           }
+                        });
+
+                        //游戏时候的场景
+                        var GameLayer = cc.Layer.extend({
+                            sprite: null,
+                            _flag:false,
+                            _size:null,
+                            _step:0,
+                            _startTime:null,
+                            ctor: function () {
+                                this._super();
+                                this._size = cc.winSize;
+                                this._flag = false;
+                                //加载背景图片
+                                var wait = cc.Sprite.create(res.waiteForGreen_img);
+                                wait.setPosition(this._size.width / 2,this._size.height / 2);
+                                wait.setScale(height / 960);
+                                this.addChild(wait);
+
+                                //j加载浮动效果
+                                var waitAnim = cc.Sprite.create(res.waiteForGreenAnim_img);
+                                waitAnim.setPosition(this._size.width / 2, this._size.height / 2+200);
+                                waitAnim.setScale(height / 960);
+                                this.addChild(waitAnim);
+                                var action = cc.Sequence.create(cc.FadeOut.create(1.0), cc.FadeIn.create(1.0));
+                                waitAnim.runAction(action.repeatForever());
+                                return true;
+                            },
+                            onEnter: function () {
+                                this._super();
+                                this._step = 0;
+                                this.scheduleUpdate();
+                                //鼠标事件
+                                var me = this;
+                                this._touchEvent = cc.EventListener.create({
+                                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                                    swallowTouches: true,
+                                    onTouchBegan: function (touch, event) {
+                                        if(me._flag)
+                                        {
+                                            var resultScene = new ResultScene();
+                                            cc.director.pushScene(resultScene);
+                                            var endtime = new Date();
+                                            var a = endtime.getTime() - me._startTime.getTime();
+                                            resultScene.setValue(a);
+                                        }
+                                        else
+                                            cc.director.pushScene(new ErrorScene());
+                                        return false;
+                                    }
+                                });
+                                cc.eventManager.addListener(this._touchEvent, this);
+                            },
+                            onExit:function(){
+                                this._super();
+                                this.unscheduleUpdate();
+                                cc.eventManager.removeListener(this._touchEvent);
+                            },
+                            showGreen: function () {
+                                this._flag = true;
+                                this._startTime = new Date();
+                                var click = cc.Sprite.create(res.click_img);
+                                click.setPosition(this._size.width / 2, this._size.height / 2);
+                                click.setScale(height / 960);
+                                this.addChild(click);
+                            },
+                            update:function(){
+                                this._step++;
+                                if(this._step == 300)
+                                    this.showGreen();
+                            }
+                        });
+                        var GameScene = cc.Scene.extend({
+                            onEnter: function () {
+                                this._super();
+                                var layer = new GameLayer();
+                                this.addChild(layer);
+                            }
+                        });
+
+                        //提前点击出现的情况
+                        var ErrorLayer = cc.Layer.extend({
+                             sprite:null,
+                             ctor: function () {
+                                 this._super();
+                                 var size = cc.winSize;
+                                 //加载背景图片
+                                 var tooSoon = cc.Sprite.create(res.tooSoon_img);
+                                 tooSoon.setPosition(size.width / 2, size.height / 2);
+                                 tooSoon.setScale(height/960);
+                                 this.addChild(tooSoon);
+                                 return true;
+                             },
+                             onEnter: function () {
+                                 this._super();
+
+                                 //鼠标事件
+                                 var me=this;
+                                 this._touchEvent=cc.EventListener.create({
+                                     event:cc.EventListener.TOUCH_ONE_BY_ONE,
+                                     swallowTouches:true,
+                                     onTouchBegan:function(touch,event){
+                                         cc.director.pushScene(new GameScene);
+                                         return false;
+                                     }
+                                 });
+
+                                 cc.eventManager.addListener(this._touchEvent,this);
+                             }
+                         });
+                        var ErrorScene = cc.Scene.extend({
+                            onEnter: function () {
+                                this._super();
+                                var layer = new ErrorLayer();
+                                this.addChild(layer);
+                            }
+                        });
+
+                        //正常点击获取结果
+                        var ResultLayer = cc.Layer.extend({
+                            sprite:null,
+                            _score:null,
+                            ctor: function () {
+                                this._super();
+                                var size = cc.winSize;
+                                //加载背景图片
+                                var  result= cc.Sprite.create(res.result_img);
+                                result.setPosition(size.width / 2, size.height / 2);
+                                result.setScale(height/960);
+                                this.addChild(result);
+
+                                //分数
+                                this._score=new cc.LabelTTF("","Arial",50);
+                                this._score.setPosition(size.width / 2,size.height/2-100);
+                                this.addChild(this._score);
+
+                                //加载浮动效果
+                                var resultAnim = cc.Sprite.create(res.clickToStartAnim_img);
+                                resultAnim.setPosition(size.width / 2, size.height / 2);
+                                resultAnim.setScale(height/960);
+                                this.addChild(resultAnim);
+                                var action = cc.Sequence.create(cc.FadeOut.create(1.0),cc.FadeIn.create(1.0));
+                                resultAnim.runAction(action.repeatForever());
+                                return true;
+                            },
+                            onEnter: function () {
+                                this._super();
+                                this._touchEvent=cc.EventListener.create({
+                                    event:cc.EventListener.TOUCH_ONE_BY_ONE,
+                                    swallowTouches:true,
+                                    onTouchBegan:function(touch,event){
+                                        cc.director.pushScene(new GameScene);
+                                        return false;
+                                    }
+                                });
+                                cc.eventManager.addListener(this._touchEvent,this);
+                            },
+                            setValue: function (value) {
+                                this._score.setString(value+"ms");
+                            }
+                        });
+                        var ResultScene = cc.Scene.extend({
+                            _layer:null,
+                            ctor: function () {
+                                this._super();
+                                this._layer = new ResultLayer();
+                                this.addChild(this._layer);
+                            },
+                            onEnter: function () {
+                                this._super();
+                            },
+                            setValue: function (value) {
+                                this._layer.setValue(value);
+                            }
+                        });
+                        //开启进入的场景
+                        cc.director.runScene(new StartScene());
+                    },this);
+            };
+
+            //根据canvas的id运行游戏
+            cc.game.run("gameCanvas");
+        };
+    </script>
+</body>
+</html>
